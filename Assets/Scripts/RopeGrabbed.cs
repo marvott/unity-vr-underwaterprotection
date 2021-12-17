@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class RopeGrabbed : MonoBehaviour
 {
+    public GameObject SceneManager;
     //Function that is called when an object selection is entered.
     public void objectSelectionEntered(SelectEnterEventArgs selectEnterEventArgs)
     {
@@ -21,11 +22,24 @@ public class RopeGrabbed : MonoBehaviour
             GameObject world = GameObject.Find("Surrounding");
             world.transform.Translate(0, 0, -3);
         }
+        else if (objectName == "Rope")
+        {
+            Debug.Log("Rope has been touched!");
+            SceneManager.GetComponent<SceneManagerScript>().setRopeIsTouched(true);
+        }
         
     }
 
-    public void objectSelectionExit(SelectEnterEventArgs selectEnterEventArgs)
+    public void objectSelectionExit(SelectExitEventArgs selectExitEventArgs)
     {
+        string objectName = selectExitEventArgs.interactable.name;
+        Debug.Log(objectName);
+
+        if(objectName == "Rope")
+        {
+            Debug.Log("Rope has been untouched!");
+            SceneManager.GetComponent<SceneManagerScript>().setRopeIsTouched(false);
+        }
 
     }
 }
