@@ -6,29 +6,35 @@ using UnityEngine.InputSystem;
 public class spawnObjects : MonoBehaviour
 {
     public GameObject garbage_prefab;
+    private GameObject childObject;
+    public GameObject parentObj;
 
     // Start is called before the first frame update
     void Start()
     {
 
+        for (int i= 0; i < 10; i++)
+        {
+            spawnObject(30);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.sKey.wasPressedThisFrame)
-        {
-            spawnObject(5);
-        }
-
+       
     }
 
     public void spawnObject(int amount)
     {
         for(int i = 0; i< amount; i++)
         {
-            Vector3 pos = new Vector3(Random.Range(-10, 10), 0.2f, Random.Range(5, 20));
-            Instantiate(garbage_prefab, pos, Quaternion.identity);
+            //Spawned zufällig Garbage Objecte in der Area
+            Vector3 pos = new Vector3(Random.Range(-10, 15), 8f, Random.Range(-10, 60));
+            childObject = Instantiate(garbage_prefab, pos, Quaternion.identity);
+            //Fügt die ganzen Garbages für eine bessere Übersicht in das übergeordnete leere GameObject.
+            childObject.transform.SetParent(parentObj.transform);
+            childObject.tag = "Garbage";
         }
         
 

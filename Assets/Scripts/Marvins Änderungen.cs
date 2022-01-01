@@ -23,6 +23,13 @@
  * 
  * wal folgt path
  * 
+ * Terrain eingefügt -> kann keine map draufpacken... alles blau ey
+ * 
+ * Random Garbage entlang der route bei start runter fallen lassen
+ * 
+ * Pflanzen eingefügt
+ * 
+ * Armbanduhr wechselt die Ansicht zwischen OHI index und pieces
  * 
  * 
  * */
