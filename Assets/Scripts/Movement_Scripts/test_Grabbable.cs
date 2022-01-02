@@ -10,7 +10,7 @@ public class test_Grabbable : MonoBehaviour {
     //Text der Anzeige bekommen
     public Text thisText;
     private int amountGarbage;
-    private int ohiIndex;
+    private float ohiIndex;
     public float period = 0.0f;
 
     private MeshRenderer meshRenderer = null;
@@ -23,7 +23,7 @@ public class test_Grabbable : MonoBehaviour {
         //grabInteractable.onActivate.AddListener(SetGreen);
         //Wert der Anzeige auf Null setzen
         amountGarbage = 0;
-        ohiIndex = 0;
+        ohiIndex = 0.0f;
         thisText.text = amountGarbage.ToString() + " Pieces"; //thisText.GetComponent<Text>().text 
 
     }
@@ -33,7 +33,7 @@ public class test_Grabbable : MonoBehaviour {
     {
         if (selectEnterEventArgs.interactable.tag == "Garbage") {
             amountGarbage += 1;
-            thisText.text = amountGarbage.ToString() + " Pieces";
+            ohiIndex += 0.25f;
         };
     }
 
