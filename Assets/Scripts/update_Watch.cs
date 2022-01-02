@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-
-
+// TODO: Ist dieses Script hier überhaupt noch relevant oder kann das raus? 
 public class update_Watch : MonoBehaviour
     {
         public Text thisText;

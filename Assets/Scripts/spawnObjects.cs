@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+/***************************************************************************************************************************
+ *This script spawns garbage objects at random places on the map. When needed any number of garbage objects can be spawned at
+ *different places on the map.
+ ***************************************************************************************************************************/
 public class spawnObjects : MonoBehaviour
 {
     public GameObject garbage_prefab;
 
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+    //Used to call spawnObject function when a specified key on the keyboard is pressed.
     void Update()
     {
         if (Keyboard.current.sKey.wasPressedThisFrame)
@@ -23,6 +27,7 @@ public class spawnObjects : MonoBehaviour
 
     }
 
+    //The function can be called to randomly spawn objects (number of objects equals the value of 'amount') on the map.
     public void spawnObject(int amount)
     {
         for(int i = 0; i< amount; i++)

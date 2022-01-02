@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO: Wird das Script hier überhaupt noch benötigt?
 public class LineRendererScript : MonoBehaviour
 {
     LineRenderer lineRenderer;
