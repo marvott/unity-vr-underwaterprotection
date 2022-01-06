@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-
-
+// TODO: Ist relevant, aber Marvin hat das noch überarbeitet. Muss dann bei Marvin noch mal kommentiert werden.  
 public class update_Watch : MonoBehaviour
     {
         public Text thisText;
@@ -15,8 +14,7 @@ public class update_Watch : MonoBehaviour
         void Start()
         {
             value = 0;
-
-            thisText.text = value.ToString() + " Points"; //thisText.GetComponent<Text>().text 
+            thisText.text = value.ToString() + " Points"; 
 
         }
 

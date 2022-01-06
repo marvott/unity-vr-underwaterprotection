@@ -3,29 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/***************************************************************************************************************************
+ *This script provides functions which can be called when a Controller interacts with objects. 
+ ***************************************************************************************************************************/
 public class RopeGrabbed : MonoBehaviour
 {
-    //Function that is called when an object selection is entered.
+    public GameObject SceneManager;
+    /***************************************************************************************************************************
+    *This function is called directly when an object is selected. Depending on the object which is selected different code is run.
+    ***************************************************************************************************************************/
     public void objectSelectionEntered(SelectEnterEventArgs selectEnterEventArgs)
     {
         string objectName = selectEnterEventArgs.interactable.name;
         Debug.Log(objectName);
 
-        if(objectName == "Trigger Box 1")
+        if (objectName == "Rope")
         {
-            GameObject world = GameObject.Find("Surrounding");
-            world.transform.Translate(0, 0, -1);
-        }
-        else if (objectName == "Trigger Box 2")
-        {
-            GameObject world = GameObject.Find("Surrounding");
-            world.transform.Translate(0, 0, -3);
+            Debug.Log("Rope has been touched!");
+            SceneManager.GetComponent<SceneManagerScript>().setRopeIsTouched(true);
         }
         
     }
 
-    public void objectSelectionExit(SelectEnterEventArgs selectEnterEventArgs)
+   /***************************************************************************************************************************
+    *This function is called after an object has been selected.
+    ***************************************************************************************************************************/
+    public void objectSelectionExit(SelectExitEventArgs selectExitEventArgs)
     {
+        string objectName = selectExitEventArgs.interactable.name;
+        Debug.Log(objectName);
+
+        if(objectName == "Rope")
+        {
+            Debug.Log("Rope has been untouched!");
+            SceneManager.GetComponent<SceneManagerScript>().setRopeIsTouched(false);
+        }
 
     }
 }
