@@ -12,6 +12,8 @@ public class SceneManagerScript : MonoBehaviour
 {
     public static bool ropeIsTouched; //Variable is true, when player touches the rope.
 
+    public static int amountGarbage; //Amount of garbage the Player has picked up
+
    /***************************************************************************************************************************
     *Return: ropeIsTouched
     ***************************************************************************************************************************/
@@ -27,4 +29,23 @@ public class SceneManagerScript : MonoBehaviour
     {
         ropeIsTouched = _ropeIsTouched;
     }
+
+
+    /***************************************************************************************************************************
+    *Return: amountGarbage
+    ***************************************************************************************************************************/
+    public int getAmountGarbage()
+    {
+        return amountGarbage;
+    }
+
+    /***************************************************************************************************************************
+    *Set amount of Garbage
+    ***************************************************************************************************************************/
+    public void setAmountGarbage(int _amountGarbage)
+    {
+        amountGarbage = _amountGarbage;
+        
+    }
+
 }

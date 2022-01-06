@@ -10,17 +10,22 @@ using UnityEngine.InputSystem;
  ***************************************************************************************************************************/
 public class spawnObjects : MonoBehaviour
 {
-    public GameObject garbage_prefab;
+    public GameObject obj_prefab;
     private GameObject childObject;
     public GameObject parentObj;
+    public int amountToSpawn;
+    public float x_start;
+    public float x_end;
+    public float y;
+    public float z_start;
+    public float z_end;
+    
 
     //Used to spawn objects at the start of the game.
     void Start()
     {
-        for (int i = 0; i < 10; i++)
-        {
-            spawnObject(30);
-        }
+        spawnObject(amountToSpawn);
+        
 
     }
 
@@ -38,14 +43,12 @@ public class spawnObjects : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            //Spawned zufällig Garbage Objecte in der Area
-            Vector3 pos = new Vector3(Random.Range(-10, 15), 8f, Random.Range(-10, 60));
-            childObject = Instantiate(garbage_prefab, pos, Quaternion.identity);
-            //Fügt die ganzen Garbages für eine bessere Übersicht in das übergeordnete leere GameObject.
+            Vector3 pos = new Vector3(Random.Range(x_start,x_end), y, Random.Range(z_start,z_end));
+            childObject = Instantiate(obj_prefab, pos, Quaternion.identity);
+
+            //Adds Garbage Objects into Parent Folder for better Overview
             childObject.transform.SetParent(parentObj.transform);
             childObject.tag = "Garbage";
         }
-
-
     }
 }

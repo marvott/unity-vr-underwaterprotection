@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641d6ce39a591aa4b98eb49781e6acc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneManager: {fileID: 1053432517}
+  SceneManager: {fileID: 0}
 --- !u!54 &1135137283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3682,6 +3682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78221d28f4a55343a5afb1d167b75ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisText: {fileID: 0}
+  value: 0
 --- !u!114 &2113693697
 MonoBehaviour:
   m_ObjectHideFlags: 0
