@@ -1858,7 +1858,7 @@ GameObject:
   - component: {fileID: 1491014040}
   - component: {fileID: 1491014039}
   m_Layer: 0
-  m_Name: Cylinder (3)
+  m_Name: Plant 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3137,7 +3137,7 @@ GameObject:
   - component: {fileID: 1892601710}
   - component: {fileID: 1892601709}
   m_Layer: 0
-  m_Name: Cylinder (2)
+  m_Name: Plant 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3391,7 +3391,7 @@ GameObject:
   - component: {fileID: 1974577483}
   - component: {fileID: 1974577482}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Plant 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3549,7 +3549,7 @@ GameObject:
   - component: {fileID: 2092675035}
   - component: {fileID: 2092675034}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
