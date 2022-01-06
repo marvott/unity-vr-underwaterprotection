@@ -10,7 +10,9 @@ using UnityEngine;
 
 public class destroyGarbage : MonoBehaviour
 {
-    //Function is called to destroy the garbage which is collected.
+    /*********************************************************************************************************************
+     *Function is called to destroy the garbage which is collected.
+     **********************************************************************************************************************/
     public void destroy()
     {
         Destroy(gameObject);

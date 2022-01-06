@@ -17,19 +17,19 @@ public class test_Grabbable : MonoBehaviour {
 
     private MeshRenderer meshRenderer = null;
     private XRGrabInteractable grabInteractable = null;
-    //TODO: Müssen hier die auskommentierten Zeilen die wirkliches Code Zeilen sind noch entfernt werden?
     void Start()
     {
         //Sets the initial value of the watch to express the state when no garbage is collected.
         meshRenderer = GetComponent<MeshRenderer>();
         grabInteractable = GetComponent<XRGrabInteractable>();
-        //grabInteractable.onActivate.AddListener(SetGreen);
         value = 0;
-        thisText.text = value.ToString() + " Pieces"; //thisText.GetComponent<Text>().text 
+        thisText.text = value.ToString() + " Pieces"; 
 
     }
 
-    //The function updates the watche's score when garbage is collected.
+    /***************************************************************************************************************************
+    *Updates score when selected interactable is tagged as "Garbage".
+    ***************************************************************************************************************************/
     public void updateScore(SelectEnterEventArgs selectEnterEventArgs)
     {
         if (selectEnterEventArgs.interactable.tag == "Garbage") {

@@ -12,11 +12,17 @@ public class SceneManagerScript : MonoBehaviour
 {
     public static bool ropeIsTouched; //Variable is true, when player touches the rope.
 
+   /***************************************************************************************************************************
+    *Return: ropeIsTouched
+    ***************************************************************************************************************************/
     public bool isRopeTouched()
     {
         return ropeIsTouched;
     }
 
+   /***************************************************************************************************************************
+    *Set ropeIsTouched to given bool value.
+    ***************************************************************************************************************************/
     public void setRopeIsTouched(bool _ropeIsTouched)
     {
         ropeIsTouched = _ropeIsTouched;

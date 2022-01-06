@@ -27,7 +27,10 @@ public class spawnObjects : MonoBehaviour
 
     }
 
-    //The function can be called to randomly spawn objects (number of objects equals the value of 'amount') on the map.
+    /***************************************************************************************************************************
+     *Spawns an defined amount of garbage objects as garbage prefabs.
+     *Parameters: int amount
+     ***************************************************************************************************************************/
     public void spawnObject(int amount)
     {
         for(int i = 0; i< amount; i++)
