@@ -31,7 +31,7 @@ public class firstPieceOfGarbage : MonoBehaviour
 
         if (!audioSource.isPlaying)
         {
-            if (amountOfGarbage == 1)
+            if (amountOfGarbage >=1 && amountOfGarbage <2)
             {
                 audioSource.clip = audioQueue[1];
                 audioSource.Play();
