@@ -600,6 +600,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "863502a8-533d-4ce2-b9ec-08bc5758524f",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Activate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "Quaternion Fallback",
                     "id": "84e51e1c-1b95-4f3e-a61f-29da6c1f0816",
                     "path": "QuaternionFallback",

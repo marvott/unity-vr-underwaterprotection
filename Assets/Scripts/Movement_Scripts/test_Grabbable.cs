@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
 using UnityEngine.UI;
 
@@ -16,9 +17,23 @@ public class test_Grabbable : MonoBehaviour {
     private int amountGarbage;
     private float ohiIndex;
     public float period = 0.0f;
-
+    public InputAction switchWatch;
+    private int currentView;
+    private string OHIText = "OHI : 0";
+    private string piecesText = "0 Pieces";
     private MeshRenderer meshRenderer = null;
     private XRGrabInteractable grabInteractable = null;
+
+    private void OnEnable()
+    {
+        switchWatch.Enable();
+    }
+
+    private void Awake()
+    {
+       switchWatch.performed += switchWatchView;
+    }
+
     void Start()
     {
         //Sets the initial value of the watch to express the state when no garbage is collected.
@@ -28,6 +43,7 @@ public class test_Grabbable : MonoBehaviour {
         amountGarbage = 0;
         ohiIndex = 0.0f;
         thisText.text = amountGarbage.ToString() + " Pieces";
+        currentView = 0;
 
     }
 
@@ -39,28 +55,38 @@ public class test_Grabbable : MonoBehaviour {
         if (selectEnterEventArgs.interactable.tag == "Garbage") {
             amountGarbage += 1;
             ohiIndex += 0.25f;
+            OHIText = "OHI: " + ohiIndex.ToString();
+            piecesText = amountGarbage.ToString() + " Pieces";
+            updateWatch();
         };
     }
 
-    public void Update()
+    public void switchWatchView(InputAction.CallbackContext ctx)
     {
-        if ( period <5)
+        if(currentView == 1)
         {
-            thisText.text = "OHI: "+ ohiIndex.ToString() ;
-            
+            currentView = 0;
+
         }
-        else if(period>5 && period< 10)
+        else if (currentView == 0)
         {
-            thisText.text = amountGarbage.ToString() + " Pieces";
+            currentView = 1;
         }
-        else
+        updateWatch();
+        Debug.Log("Watch View changed");
+    }
+
+    public void updateWatch()
+    {
+        if (currentView == 1)
         {
-            period = 0;
+            thisText.text = OHIText;
+
         }
-       
-        
-        
-        period += Time.deltaTime;
+        else if (currentView == 0)
+        {
+            thisText.text = piecesText;
+        }
     }
 
 
