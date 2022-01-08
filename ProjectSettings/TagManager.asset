@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Garbage
   - rope
+  - FishGroup
   layers:
   - Default
   - TransparentFX
