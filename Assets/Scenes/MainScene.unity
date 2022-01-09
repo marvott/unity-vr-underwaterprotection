@@ -260,6 +260,8 @@ GameObject:
   - component: {fileID: 252122345}
   - component: {fileID: 252122344}
   - component: {fileID: 252122348}
+  - component: {fileID: 252122349}
+  - component: {fileID: 252122347}
   m_Layer: 0
   m_Name: Whale
   m_TagString: Untagged
@@ -344,6 +346,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252122342}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &252122347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252122342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0e3b65c47bb824aa44f871561a4802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 856025723}
+  XRRig: {fileID: 1117733778}
+  tolerance: 0.3
+  triggerDistanceZ: 40
+  toBeExecuted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 252122349}
+        m_TargetAssemblyTypeName: WhaleScript, Assembly-CSharp
+        m_MethodName: whaleInViewField
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &252122348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +392,18 @@ MonoBehaviour:
   pathCreator: {fileID: 568617290}
   endOfPathInstruction: 2
   speed: 3
+--- !u!114 &252122349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252122342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f222fbb7bf87234c927f71cf2472355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &254868408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,7 +1864,6 @@ GameObject:
   - component: {fileID: 1117733779}
   - component: {fileID: 1117733782}
   - component: {fileID: 1117733783}
-  - component: {fileID: 1117733784}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Untagged
@@ -1936,23 +1980,6 @@ MonoBehaviour:
   SceneManager: {fileID: 1053432517}
   controller: {fileID: 1811266107}
   camera: {fileID: 856025723}
---- !u!114 &1117733784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117733778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c0e3b65c47bb824aa44f871561a4802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 856025723}
-  whale: {fileID: 252122342}
-  XRRig: {fileID: 1117733778}
-  tolerance: 0.3
-  triggerDistanceZ: 200
 --- !u!1 &1131647093
 GameObject:
   m_ObjectHideFlags: 0
