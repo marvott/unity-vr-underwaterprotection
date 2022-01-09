@@ -8,6 +8,7 @@ public class WhaleInView : MonoBehaviour
 {
     public Camera camera;
     public GameObject whale;
+    public GameObject XRRig;
     private Vector3 camViewVec, playerPosition, whalePosition, whalePlayerVec;
     private float playerWhaleHighestValue, camHighestValue;
     public float tolerance, triggerDistanceZ;
@@ -21,7 +22,7 @@ public class WhaleInView : MonoBehaviour
     void Update()
     {
         camViewVec = camera.transform.forward;
-        playerPosition = gameObject.transform.position;
+        playerPosition = XRRig.transform.position;
         whalePosition = whale.transform.position;
         whalePlayerVec = new Vector3(whalePosition.x - playerPosition.x, whalePosition.y - playerPosition.y, whalePosition.z - playerPosition.z);
 

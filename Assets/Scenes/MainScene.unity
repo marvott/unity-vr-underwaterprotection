@@ -1950,8 +1950,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 856025723}
   whale: {fileID: 252122342}
+  XRRig: {fileID: 1117733778}
   tolerance: 0.3
-  triggerDistanceZ: 40
+  triggerDistanceZ: 200
 --- !u!1 &1131647093
 GameObject:
   m_ObjectHideFlags: 0
