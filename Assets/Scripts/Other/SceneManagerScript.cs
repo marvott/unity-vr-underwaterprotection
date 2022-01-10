@@ -10,9 +10,9 @@ using UnityEngine;
  ***************************************************************************************************************************/
 public class SceneManagerScript : MonoBehaviour
 {
-    public static bool ropeIsTouched; //Variable is true, when player touches the rope.
+    private static bool ropeIsTouched; //Variable is true, when player touches the rope.
 
-    public static int amountGarbage; //Amount of garbage the Player has picked up
+    private static int amountGarbage = 0; //Amount of garbage the Player has picked up
 
    /***************************************************************************************************************************
     *Return: ropeIsTouched

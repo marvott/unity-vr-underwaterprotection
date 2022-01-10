@@ -2,34 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 
 using UnityEngine.UI;
 
 /***************************************************************************************************************************
- *This script provides the functionality to update the score on the watch when a garbage object is collected aswell as it sets 
+ *This script provides the functionality to update the watche's score when a garbage object is collected aswell as it sets 
  *the initial value for the watch.
  ***************************************************************************************************************************/
 
-public class test_Grabbable : MonoBehaviour { 
+public class test_Grabbable : MonoBehaviour
+{
 
     public Text thisText;
-    public int amountGarbage;
     private float ohiIndex;
-    private float period = 0.0f;
-
+    public float period = 0.0f;
+    public InputAction switchWatch;
+    private int currentView;
+    private string OHIText = "OHI : 0";
+    private string piecesText = "0 Pieces";
     private MeshRenderer meshRenderer = null;
     private XRGrabInteractable grabInteractable = null;
 
     public GameObject SceneManager;
+
+    private void OnEnable()
+    {
+        switchWatch.Enable();
+    }
+
+    private void Awake()
+    {
+        switchWatch.performed += switchWatchView;
+    }
 
     void Start()
     {
         //Sets the initial value of the watch to express the state when no garbage is collected.
         meshRenderer = GetComponent<MeshRenderer>();
         grabInteractable = GetComponent<XRGrabInteractable>();
-        amountGarbage = 0;
+        //Set OHI Index to zero
         ohiIndex = 0.0f;
-        thisText.text = amountGarbage.ToString() + " Pieces";
+        thisText.text = SceneManager.GetComponent<SceneManagerScript>().getAmountGarbage() + " Pieces";
+        currentView = 0;
 
     }
 
@@ -38,32 +53,44 @@ public class test_Grabbable : MonoBehaviour {
     ***************************************************************************************************************************/
     public void updateScore(SelectEnterEventArgs selectEnterEventArgs)
     {
-        if (selectEnterEventArgs.interactable.tag == "Garbage") {
-            amountGarbage += 1;
+        if (selectEnterEventArgs.interactable.tag == "Garbage")
+        {
             ohiIndex += 0.25f;
+            SceneManager.GetComponent<SceneManagerScript>().setAmountGarbage(SceneManager.GetComponent<SceneManagerScript>().getAmountGarbage() + 1);
+            OHIText = "OHI: " + ohiIndex.ToString();
+            piecesText = SceneManager.GetComponent<SceneManagerScript>().getAmountGarbage() + " Pieces";
+            updateWatch();
         };
     }
 
-    public void Update()
+    public void switchWatchView(InputAction.CallbackContext ctx)
     {
-        if ( period <5)
+        if (currentView == 1)
         {
-            thisText.text = "OHI: "+ ohiIndex.ToString() ;
-            
-        }
-        else if(period>5 && period< 10)
-        {
-            thisText.text = amountGarbage.ToString() + " Pieces";
-        }
-        else
-        {
-            period = 0;
-        }
+            currentView = 0;
 
+        }
+        else if (currentView == 0)
+        {
+            currentView = 1;
+        }
+        updateWatch();
+        Debug.Log("Watch View changed");
+    }
 
-        SceneManager.GetComponent<SceneManagerScript>().setAmountGarbage(amountGarbage);
-        period += Time.deltaTime;
+    public void updateWatch()
+    {
+        if (currentView == 1)
+        {
+            thisText.text = OHIText;
+
+        }
+        else if (currentView == 0)
+        {
+            thisText.text = piecesText;
+        }
     }
 
 
 }
+
