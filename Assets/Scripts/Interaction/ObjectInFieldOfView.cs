@@ -48,8 +48,8 @@ public class ObjectInFieldOfView : MonoBehaviour
         }
 
         camViewVec = new Vector3(camViewVec.x / camHighestValue, camViewVec.y / camHighestValue, camViewVec.z / camHighestValue);
-        Debug.Log("whalePlayerVec " + objectPlayerVec + "camViewVec" + camViewVec);
-        Debug.Log("PlayerPosition: " + playerPosition.z + "Objektposition" + objectPosition.z);
+        //Debug.Log("whalePlayerVec " + objectPlayerVec + "camViewVec" + camViewVec);
+        //Debug.Log("PlayerPosition: " + playerPosition.z + "Objektposition" + objectPosition.z);
         if ((objectPlayerVec.x >= camViewVec.x - tolerance && objectPlayerVec.x <= camViewVec.x + tolerance) && (objectPlayerVec.y >= camViewVec.y - tolerance && objectPlayerVec.y <= camViewVec.y + tolerance) && (objectPlayerVec.z >= camViewVec.z - tolerance && objectPlayerVec.z <= camViewVec.z + tolerance) && Math.Abs(playerPosition.z - objectPosition.z) <= triggerDistanceZ)
         {
             executeNow();

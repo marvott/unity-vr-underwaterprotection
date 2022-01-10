@@ -23,11 +23,15 @@ public class spawnFish : MonoBehaviour
     public int spawnFishgroupEveryXGarbageCollected;
     private int amountOfCollectedGarbage;
     private int oldAmountGarbageValue = 0;
+    
 
     void Start()
     {
         //Instantiates new FishGroups at Start
         spawnFishGroup(initialFishGroups);
+
+
+
     }
 
     void FixedUpdate()
@@ -52,11 +56,19 @@ public class spawnFish : MonoBehaviour
     {
         for (int i = 0; i< amount; i++) { 
             Vector3 pos = new Vector3(Random.Range(x_start, x_end), Random.Range(y_start,y_end), Random.Range(z_start, z_end));
-            childObject = Instantiate(obj_prefab, pos, Quaternion.Euler(Random.Range(-20f, 20f), Random.Range(-50f, 50f), Random.Range(-50f, 50f)));
+            childObject = Instantiate(obj_prefab, pos, Quaternion.Euler(0, Random.Range(0, 180f), 0));
 
             //Adds Garbage Objects into Parent Folder for better Overview
             childObject.transform.SetParent(parentObj.transform);
             childObject.tag = "FishGroup";
+
+            if ( i%3==0)
+            {
+                childObject.GetComponent<Rigidbody>().velocity = transform.forward * 0.1f;
+            }else
+            {
+                childObject.GetComponent<Rigidbody>().velocity = -transform.forward * 0.1f;
+            }
         }
-     }
+    }
 }
