@@ -5855,7 +5855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135137280}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: -14.924, z: -19.978}
+  m_LocalPosition: {x: 0, y: -14.71, z: -19.978}
   m_LocalScale: {x: 0.15, y: 20, z: 0.15}
   m_Children: []
   m_Father: {fileID: 1956597647}
@@ -6332,7 +6332,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
