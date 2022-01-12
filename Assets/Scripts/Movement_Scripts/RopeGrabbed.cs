@@ -19,7 +19,6 @@ public class RopeGrabbed : MonoBehaviour
 
         if (objectName == "Rope")
         {
-            Debug.Log("Rope has been touched!");
             SceneManager.GetComponent<SceneManagerScript>().setRopeIsTouched(true);
         }
         
@@ -31,7 +30,6 @@ public class RopeGrabbed : MonoBehaviour
     public void objectSelectionExit(SelectExitEventArgs selectExitEventArgs)
     {
         string objectName = selectExitEventArgs.interactable.name;
-        Debug.Log(objectName);
 
         if(objectName == "Rope")
         {

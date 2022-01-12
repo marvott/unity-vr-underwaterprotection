@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/MarvMainScene.unity
+    guid: 1f32e546a50824651a7b12e06ae35ff9
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 62feecad44029cf46b9f93f31fe66b5d, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: af4d3743291bde44e84467b4c55baff4, type: 2}

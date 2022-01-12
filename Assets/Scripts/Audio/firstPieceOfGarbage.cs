@@ -10,7 +10,6 @@ using UnityEngine;
 public class firstPieceOfGarbage : MonoBehaviour
 {
     public GameObject SceneManager;
-
     public List<AudioClip> audioQueue;
     public AudioSource audioSource;
 
