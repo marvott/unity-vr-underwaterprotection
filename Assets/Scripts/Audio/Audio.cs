@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/***************************************************************************************************************************
+ *Plays any AudioClip that is given as a parameter if not another audio is playing
+ ***************************************************************************************************************************/
 public class Audio : MonoBehaviour
 {
-    public List<AudioClip> audioQueue;
+    public AudioSource src;
 
     public void playAudioSource(AudioClip clip)
-    {
-        AudioSource src = new AudioSource();        
+    { 
         src.clip = clip;
-        Debug.Log("terasfd");
         if (!src.isPlaying)
         {
             src.Play();
