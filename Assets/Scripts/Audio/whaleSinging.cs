@@ -11,7 +11,7 @@ public class whaleSinging : MonoBehaviour
     public float triggerAudioIfPlayerAtZPos;
     private bool hasBeenPlayed = false;
     public AudioSource mainAudioSource;
-    public UnityEvent playVoiceAfterDiscovery;
+    //public UnityEvent playVoiceAfterDiscovery;
 
     void Update()
     {
@@ -20,16 +20,11 @@ public class whaleSinging : MonoBehaviour
         {
             Whale_Obj.GetComponent<AudioSource>().Play();
             hasBeenPlayed = true;
-            Invoke("playVoice", 10); 
+            //Invoke("playVoice", 10); 
         }
         if (Whale_Obj.transform.position.x >= 30)
         {
             mainAudioSource.Stop();
         }
-    }
-
-    void playVoice()
-    {
-        playVoiceAfterDiscovery.Invoke();
     }
 }

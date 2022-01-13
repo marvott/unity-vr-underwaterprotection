@@ -8608,21 +8608,6 @@ MonoBehaviour:
   Whale_Obj: {fileID: 252122342}
   triggerAudioIfPlayerAtZPos: 12
   mainAudioSource: {fileID: 1630865964}
-  playVoiceAfterDiscovery:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1630865965}
-        m_TargetAssemblyTypeName: Audio, Assembly-CSharp
-        m_MethodName: playAudioSource
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 0dd6838c316bf1c4984c366aa5aa45ce, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1630865968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8630,7 +8615,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630865963}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b40d287c890442e4982bf3ec8b8e773f, type: 3}
   m_Name: 
@@ -8663,15 +8648,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13759a61df9534870b2fc82b873ac7c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneManager: {fileID: 1053432517}
-  audioQueue:
+  audioSource: {fileID: 1630865964}
+  XRRig: {fileID: 1117733778}
+  sceneManager: {fileID: 1053432517}
+  audioList:
   - {fileID: 8300000, guid: a368935555c5c014197ebc78fcf12344, type: 3}
   - {fileID: 8300000, guid: 05040fb845e706649b9950182d430040, type: 3}
   - {fileID: 8300000, guid: aef8ea10c52f6814d82e7a039652688a, type: 3}
-  - {fileID: 8300000, guid: 8b7730cb40068154a9e81ccc52f3ccd1, type: 3}
   - {fileID: 8300000, guid: 72a9db8012611f540997de59f0f5934f, type: 3}
-  audioSource: {fileID: 1630865964}
-  btnPressed: 0
+  - {fileID: 8300000, guid: 8b7730cb40068154a9e81ccc52f3ccd1, type: 3}
+  - {fileID: 8300000, guid: 7d66a5e27efd53c44ae9354e52518883, type: 3}
+  - {fileID: 8300000, guid: 0dd6838c316bf1c4984c366aa5aa45ce, type: 3}
 --- !u!1 &1642286178 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9199965385640073330, guid: 81718b07ebc21f644b519336bc87defa, type: 3}

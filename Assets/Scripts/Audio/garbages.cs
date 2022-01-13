@@ -8,52 +8,39 @@ using UnityEngine;
 
 public class garbages : MonoBehaviour
 {
-    public GameObject SceneManager;
-    public List<AudioClip> audioQueue;
+    private List<AudioClass> audioClasses;
     public AudioSource audioSource;
-    private bool hasBeenPlayed = false;
-    private int amountOfGarbage;
-    public bool btnPressed = false; //hier soll eigentlich der knopfdruck nach start abgefragt werden
-    private bool tutorialEnd = false;
+    public GameObject XRRig, sceneManager;
+    public List<AudioClip> audioList;
 
-    void FixedUpdate()
+    private void Start()
     {
-        amountOfGarbage = SceneManager.GetComponent<SceneManagerScript>().getAmountGarbage();
+        audioClasses = new List<AudioClass>();
+        AudioClass audio0 = new AudioClass(audioSource,audioList[0], 0, 2, sceneManager, XRRig, true);
+        audioClasses.Add(audio0);
+        AudioClass audio1 = new AudioClass(audioSource, audioList[1], 1, 1, sceneManager, XRRig, true);
+        audioClasses.Add(audio1);
+        AudioClass audio2 = new AudioClass(audioSource, audioList[2], 5, 0, sceneManager, XRRig, false);
+        audioClasses.Add(audio2);
+        AudioClass audio3 = new AudioClass(audioSource, audioList[3], 8, 0, sceneManager, XRRig, false);
+        audioClasses.Add(audio3);
+        AudioClass audiowal = new AudioClass(audioSource, audioList[6], 13, 0, sceneManager, XRRig, false);
+        audioClasses.Add(audiowal);
+        //AudioClass audio4 = new AudioClass(audioSource, audioList[4], 27, 0, sceneManager, XRRig, false);
+        //audioClasses.Add(audio4);
+        AudioClass audio5 = new AudioClass(audioSource, audioList[5], 34, 0, sceneManager, XRRig, true);
+        audioClasses.Add(audio5);
+    }
 
-        if (!audioSource.isPlaying)
+    private void FixedUpdate()
+    {
+        foreach(AudioClass x in audioClasses)
         {
-            if (btnPressed ==true)
+            if (x.isTriggered())
             {
-                audioSource.clip = audioQueue[0];
-                hasBeenPlayed = true;
-                btnPressed = false;
-                audioSource.PlayOneShot(audioSource.clip);
-            }
-
-            if(amountOfGarbage != 0  && hasBeenPlayed==true && tutorialEnd==false) {
-                audioSource.clip = audioQueue[1];
-                audioSource.PlayOneShot(audioSource.clip);
-                tutorialEnd = true;
-            }
-
-            if(amountOfGarbage>17 &&amountOfGarbage<=18 && tutorialEnd == true)
-            {
-                audioSource.clip = audioQueue[2];
-                audioSource.PlayOneShot(audioSource.clip);
-            }
-
-            if (amountOfGarbage > 30 && amountOfGarbage < 32 && tutorialEnd == true)
-            {
-                audioSource.clip = audioQueue[3];
-                audioSource.PlayOneShot(audioSource.clip);
-            }
-
-            if (amountOfGarbage > 50 && amountOfGarbage < 52 && tutorialEnd == true)
-            {
-                audioSource.clip = audioQueue[4];
-                audioSource.PlayOneShot(audioSource.clip);
+                x.play();
             }
         }
-
     }
+
 }
