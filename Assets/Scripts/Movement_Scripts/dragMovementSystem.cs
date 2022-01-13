@@ -40,8 +40,6 @@ namespace UnityEngine.XR.Interaction.Toolkit
             {
 
                 movementVec = new Vector2(0 - camViewVec.x, 1 + (camViewVec.z -1)); //movementVec is always interpreted according to the players viewing angle. To always get a Vector (0,1) in the world coordinate system the viewing angle is computet corresponding.
-                Debug.Log("CamVec" + camViewVec);
-                Debug.Log("MoveVec" + movementVec);
                 return movementVec;
             }
             else
