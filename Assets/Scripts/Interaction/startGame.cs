@@ -9,6 +9,7 @@ public class startGame : MonoBehaviour
 
     public InputAction start;
     public InputAction permittedActions;
+    public GameObject sceneManager;
     private Text text;
 
     private void OnEnable()
@@ -27,6 +28,7 @@ public class startGame : MonoBehaviour
     public void startIntroAudio(InputAction.CallbackContext ctx)
     {
         gameObject.active = false;
+        sceneManager.GetComponent<SceneManagerScript>().setStartTriggered(true);
     }
 
     public void permittedAction(InputAction.CallbackContext ctx)

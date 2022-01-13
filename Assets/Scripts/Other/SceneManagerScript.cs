@@ -14,7 +14,7 @@ public class SceneManagerScript : MonoBehaviour
 
     private static int amountGarbage = 0; //Amount of garbage the Player has picked up
 
-    private static bool startTriggered = true;
+    private static bool startTriggered = false;
 
    /***************************************************************************************************************************
     *Return: ropeIsTouched

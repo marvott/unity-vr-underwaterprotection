@@ -34,11 +34,14 @@ public class garbages : MonoBehaviour
 
     private void FixedUpdate()
     {
-        foreach(AudioClass x in audioClasses)
+        if (sceneManager.GetComponent<SceneManagerScript>().getStartTriggered())
         {
-            if (x.isTriggered())
+            foreach (AudioClass x in audioClasses)
             {
-                x.play();
+                if (x.isTriggered())
+                {
+                    x.play();
+                }
             }
         }
     }

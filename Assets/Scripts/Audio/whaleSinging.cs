@@ -16,15 +16,11 @@ public class whaleSinging : MonoBehaviour
     void Update()
     {
         player_zPos = XRRig.transform.position.z;
+
         if (player_zPos >= triggerAudioIfPlayerAtZPos && hasBeenPlayed == false)
         {
             Whale_Obj.GetComponent<AudioSource>().Play();
             hasBeenPlayed = true;
-            //Invoke("playVoice", 10); 
-        }
-        if (Whale_Obj.transform.position.x >= 30)
-        {
-            mainAudioSource.Stop();
         }
     }
 }
