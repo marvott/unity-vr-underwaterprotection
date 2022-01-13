@@ -12,10 +12,9 @@ public class Audio : MonoBehaviour
 
     public void playAudioSource(AudioClip clip)
     { 
-        src.clip = clip;
         if (!src.isPlaying)
         {
-            src.Play();
+            src.PlayOneShot(clip,1f);
         }
     }
 }
