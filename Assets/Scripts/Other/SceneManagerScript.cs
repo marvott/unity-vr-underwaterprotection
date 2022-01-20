@@ -11,9 +11,7 @@ using UnityEngine;
 public class SceneManagerScript : MonoBehaviour
 {
     private static bool ropeIsTouched; //Variable is true, when player touches the rope.
-
     private static int amountGarbage = 0; //Amount of garbage the Player has picked up
-
     private static bool startTriggered = false;
 
    /***************************************************************************************************************************

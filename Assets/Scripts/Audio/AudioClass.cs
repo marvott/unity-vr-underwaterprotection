@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class AudioClass
 {
@@ -8,7 +9,7 @@ public class AudioClass
     private float numberToTrigger;
     private int triggerMode;
     public AudioSource audioSource;
-    public GameObject XRRig;
+    public GameObject XRRig, mainCamera, righthandController;
     public GameObject sceneManager;
     private AudioClip audioClip;
 
@@ -25,21 +26,33 @@ public class AudioClass
         this.hasToBePlayed = hasToBePlayed;
     }
 
-    public void play()
+    public AudioClip play()
     {
         if (!hasBeenPlayed)
         {
-            if (!audioSource.isPlaying)
+            if (hasToBePlayed && !audioSource.isPlaying)
             {
                 audioSource.clip = audioClip;
                 audioSource.Play();
                 hasBeenPlayed = true;
+                return null;
             }
-            if (!hasToBePlayed)
+            else
             {
+                mainCamera = XRRig.transform.GetChild(0).gameObject;
+                foreach (Transform child in mainCamera.transform)
+                {
+                    if (child.name == "RightHand Controller")
+                    {
+                        righthandController = child.gameObject;
+                    }
+                }
+                righthandController.GetComponent<hapticImpulse>().custAmplitImpulse(1f, 0.7f);
                 hasBeenPlayed = true;
+                return audioClip;
             }
         }
+        return null;
     }
 
     public bool isTriggered()

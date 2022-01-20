@@ -11,16 +11,16 @@ using UnityEngine.UI;
  *the initial value for the watch.
  ***************************************************************************************************************************/
 
-public class test_Grabbable : MonoBehaviour
+public class watchScript : MonoBehaviour
 {
 
     public Text thisText;
     private float ohiIndex;
-    public float period = 0.0f;
     public InputAction switchWatch;
     private int currentView;
     private string OHIText = "OHI : 0";
     private string piecesText = "0 Pieces";
+    private bool incomingMessage = false;
     private MeshRenderer meshRenderer = null;
     private XRGrabInteractable grabInteractable = null;
 
@@ -63,7 +63,7 @@ public class test_Grabbable : MonoBehaviour
         };
     }
 
-    public void switchWatchView(InputAction.CallbackContext ctx)
+    private void switchWatchView(InputAction.CallbackContext ctx)
     {
         if (currentView == 1)
         {
@@ -80,17 +80,26 @@ public class test_Grabbable : MonoBehaviour
 
     public void updateWatch()
     {
-        if (currentView == 1)
+        if (incomingMessage == false)
         {
-            thisText.text = OHIText;
+            if (currentView == 1)
+            {
+                thisText.text = OHIText;
 
-        }
-        else if (currentView == 0)
-        {
-            thisText.text = piecesText;
+            }
+            else if (currentView == 0)
+            {
+                thisText.text = piecesText;
+            }
         }
     }
 
+    public void setIncomingMessage(bool value)
+    {
+        incomingMessage = value;
+        if (value == true) thisText.text = "!";
+        if(value == false) updateWatch();
+    }
 
 }
 
