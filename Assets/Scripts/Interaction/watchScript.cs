@@ -15,12 +15,11 @@ public class watchScript : MonoBehaviour
 {
 
     public Text thisText;
-    private float ohiIndex;
     public InputAction switchWatch;
     private int currentView;
-    private string OHIText = "OHI : 0";
-    private string piecesText = "0 Pieces";
-    private bool incomingMessage = false;
+    private static string OHIText ;
+    private static string piecesText;
+    private static bool incomingMessage = false;
     private MeshRenderer meshRenderer = null;
     private XRGrabInteractable grabInteractable = null;
 
@@ -38,14 +37,12 @@ public class watchScript : MonoBehaviour
 
     void Start()
     {
-        //Sets the initial value of the watch to express the state when no garbage is collected.
         meshRenderer = GetComponent<MeshRenderer>();
         grabInteractable = GetComponent<XRGrabInteractable>();
-        //Set OHI Index to zero
-        ohiIndex = 0.0f;
-        thisText.text = SceneManager.GetComponent<SceneManagerScript>().getAmountGarbage() + " Pieces";
+        piecesText = "Pieces: " + 0;
+        OHIText = "OHI: " + 0;
+        thisText.text = piecesText;
         currentView = 0;
-
     }
 
     /***************************************************************************************************************************
@@ -55,10 +52,10 @@ public class watchScript : MonoBehaviour
     {
         if (selectEnterEventArgs.interactable.tag == "Garbage")
         {
-            ohiIndex += 0.25f;
+            SceneManager.GetComponent<SceneManagerScript>().setOHIIndex(SceneManager.GetComponent<SceneManagerScript>().getOHIIndex() + 0.25f);
             SceneManager.GetComponent<SceneManagerScript>().setAmountGarbage(SceneManager.GetComponent<SceneManagerScript>().getAmountGarbage() + 1);
-            OHIText = "OHI: " + ohiIndex.ToString();
-            piecesText = SceneManager.GetComponent<SceneManagerScript>().getAmountGarbage() + " Pieces";
+            OHIText = "OHI: " + SceneManager.GetComponent<SceneManagerScript>().getOHIIndex();
+            piecesText = "Pieces: " + SceneManager.GetComponent<SceneManagerScript>().getAmountGarbage();
             updateWatch();
         };
     }
@@ -80,7 +77,7 @@ public class watchScript : MonoBehaviour
 
     public void updateWatch()
     {
-        if (incomingMessage == false)
+         if (incomingMessage == false)
         {
             if (currentView == 1)
             {
@@ -97,8 +94,30 @@ public class watchScript : MonoBehaviour
     public void setIncomingMessage(bool value)
     {
         incomingMessage = value;
-        if (value == true) thisText.text = "!";
-        if(value == false) updateWatch();
+        if (value == true)
+        {
+            thisText.text = "New message!";
+            thisText.fontSize = 11;
+        }
+        if (value == false)
+        {
+            thisText.fontSize = 14;
+            updateWatch();
+        }
+    }
+
+    public void stillPlaying()
+    {
+        thisText.text = "Audio still playing!";
+        Invoke("resetText", 1);
+    }
+
+    public void resetText()
+    {
+        if(thisText.text == "Audio still playing!")
+        {
+            thisText.text = "New message! ";
+        }
     }
 
 }

@@ -11,7 +11,8 @@ using UnityEngine;
 public class SceneManagerScript : MonoBehaviour
 {
     private static bool ropeIsTouched; //Variable is true, when player touches the rope.
-    private static int amountGarbage = 0; //Amount of garbage the Player has picked up
+    private static int amountGarbage; //Amount of garbage the Player has picked up
+    private static float ohiIndex; //Value of OHI Index.
     private static bool startTriggered = false;
 
    /***************************************************************************************************************************
@@ -46,6 +47,23 @@ public class SceneManagerScript : MonoBehaviour
     {
         amountGarbage = _amountGarbage;
         
+    }
+
+    /***************************************************************************************************************************
+    *Return: ohiIndex
+    ***************************************************************************************************************************/
+    public float getOHIIndex()
+    {
+        return ohiIndex;
+    }
+
+    /***************************************************************************************************************************
+    *Set ohiIndex
+    ***************************************************************************************************************************/
+    public void setOHIIndex(float __ohiIndex)
+    {
+        ohiIndex = __ohiIndex;
+
     }
 
 

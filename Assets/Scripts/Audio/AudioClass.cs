@@ -9,7 +9,7 @@ public class AudioClass
     private float numberToTrigger;
     private int triggerMode;
     public AudioSource audioSource;
-    public GameObject XRRig, mainCamera, righthandController;
+    public GameObject XRRig;
     public GameObject sceneManager;
     private AudioClip audioClip;
 
@@ -28,10 +28,15 @@ public class AudioClass
 
     public AudioClip play()
     {
+        if(sceneManager.GetComponent<SceneManagerScript>().getStartTriggered() == false)
+        {
+            return null;
+        }
         if (!hasBeenPlayed)
         {
-            if (hasToBePlayed && !audioSource.isPlaying)
+            if (hasToBePlayed)
             {
+                if (audioSource.isPlaying) return null;
                 audioSource.clip = audioClip;
                 audioSource.Play();
                 hasBeenPlayed = true;
@@ -39,15 +44,6 @@ public class AudioClass
             }
             else
             {
-                mainCamera = XRRig.transform.GetChild(0).gameObject;
-                foreach (Transform child in mainCamera.transform)
-                {
-                    if (child.name == "RightHand Controller")
-                    {
-                        righthandController = child.gameObject;
-                    }
-                }
-                righthandController.GetComponent<hapticImpulse>().custAmplitImpulse(1f, 0.7f);
                 hasBeenPlayed = true;
                 return audioClip;
             }

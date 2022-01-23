@@ -7,20 +7,24 @@ using UnityEngine.InputSystem;
  *first Audio Source is being played
  ***************************************************************************************************************************/
 
-public class garbages : MonoBehaviour
+public class AudiomanagerScript : MonoBehaviour
 {
     private List<AudioClass> audioClasses;
     public AudioSource audioSource;
-    public GameObject XRRig, sceneManager, watch;
+    public GameObject XRRig, sceneManager;
+    private GameObject mainCamera, watch, righthandController;
     public List<AudioClip> audioList;
     private AudioClip savedClip;
 
     public InputAction playSavedClip;
+    public InputAction declineSavedClip;
 
     private void Awake()
     {
         playSavedClip.Enable();
         playSavedClip.performed += playSaved;
+        declineSavedClip.Enable();
+        declineSavedClip.performed += declineSaved;
     }
 
     private void Start()
@@ -41,6 +45,15 @@ public class garbages : MonoBehaviour
         AudioClass audio5 = new AudioClass(audioSource, audioList[5], 34, 0, sceneManager, XRRig, true);
         audioClasses.Add(audio5);
         watch = GameObject.Find("WatchView");
+
+        mainCamera = XRRig.transform.GetChild(0).gameObject;
+        foreach (Transform child in mainCamera.transform)
+        {
+            if (child.name == "RightHand Controller")
+            {
+                righthandController = child.gameObject;
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -55,6 +68,7 @@ public class garbages : MonoBehaviour
                     if (playAudio != null)
                     {
                         savedClip = playAudio;
+                        righthandController.GetComponent<hapticImpulse>().custAmplitImpulse(1f, 0.7f);
                         watch.GetComponent<watchScript>().setIncomingMessage(true);
                     }
                 }
@@ -66,12 +80,24 @@ public class garbages : MonoBehaviour
     {
         if (savedClip != null)
         {
+            if (audioSource.isPlaying)
+            {
+                watch.GetComponent<watchScript>().stillPlaying();
+                righthandController.GetComponent<hapticImpulse>().custAmplitImpulse(1f, 0.7f);
+                return;
+            }
             audioSource.clip = savedClip;
             watch.GetComponent<watchScript>().setIncomingMessage(false);
             audioSource.Play();
             savedClip = null;
         }
 
+    }
+
+    public void declineSaved(InputAction.CallbackContext ctx)
+    {
+        savedClip = null;
+        watch.GetComponent<watchScript>().setIncomingMessage(false);
     }
 
 }
