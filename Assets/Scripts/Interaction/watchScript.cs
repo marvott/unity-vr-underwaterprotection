@@ -22,6 +22,9 @@ public class watchScript : MonoBehaviour
     private static bool incomingMessage = false;
     private MeshRenderer meshRenderer = null;
     private XRGrabInteractable grabInteractable = null;
+    private Slider progressbarSlider;
+    private GameObject progressbar;
+
 
     public GameObject SceneManager;
 
@@ -39,10 +42,13 @@ public class watchScript : MonoBehaviour
     {
         meshRenderer = GetComponent<MeshRenderer>();
         grabInteractable = GetComponent<XRGrabInteractable>();
+        progressbar = GameObject.Find("Progressbar");
+        progressbarSlider = progressbar.GetComponent<Slider>();
         piecesText = "Pieces: " + 0;
         OHIText = "OHI: " + 0;
         thisText.text = piecesText;
         currentView = 0;
+        progressbarSlider.fillRect.GetComponent<Image>().color = new Color(0,255,0);
     }
 
     /***************************************************************************************************************************
@@ -82,11 +88,16 @@ public class watchScript : MonoBehaviour
             if (currentView == 1)
             {
                 thisText.text = OHIText;
+                progressbarSlider. maxValue = 100;
+                progressbarSlider.value = SceneManager.GetComponent<SceneManagerScript>().getOHIIndex();
 
             }
             else if (currentView == 0)
             {
                 thisText.text = piecesText;
+                progressbarSlider.maxValue = 150;
+                progressbarSlider.value = SceneManager.GetComponent<SceneManagerScript>().getAmountGarbage();
+
             }
         }
     }
@@ -98,11 +109,16 @@ public class watchScript : MonoBehaviour
         {
             thisText.text = "New message!";
             thisText.fontSize = 11;
+            thisText.transform.localPosition = new Vector3(-0.0033f, thisText.transform.localPosition.y, thisText.transform.localPosition.z);
+            progressbar.SetActive(false);
+
         }
         if (value == false)
         {
             thisText.fontSize = 14;
             updateWatch();
+            thisText.transform.localPosition = new Vector3(0.005f, thisText.transform.localPosition.y, thisText.transform.localPosition.z);
+            progressbar.SetActive(true);
         }
     }
 
