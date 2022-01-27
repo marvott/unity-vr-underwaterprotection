@@ -19,13 +19,13 @@ public class spawnObjects : MonoBehaviour
     public float y;
     public float z_start;
     public float z_end;
+    public List<GameObject> PrefabsList;
     
 
     //Used to spawn objects at the start of the game.
     void Start()
     {
         spawnObject(amountToSpawn);
-        
 
     }
 
@@ -44,7 +44,7 @@ public class spawnObjects : MonoBehaviour
         for (int i = 0; i < amount; i++)
         {
             Vector3 pos = new Vector3(Random.Range(x_start,x_end), y, Random.Range(z_start,z_end));
-            childObject = Instantiate(obj_prefab, pos, Quaternion.identity);
+            childObject = Instantiate(PrefabsList[Random.Range(0,PrefabsList.Count)], pos, Quaternion.identity);
 
             //Adds Garbage Objects into Parent Folder for better Overview
             childObject.transform.SetParent(parentObj.transform);

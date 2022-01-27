@@ -15,7 +15,6 @@ public class EndGame_Script : MonoBehaviour
     public GameObject Whale;
     public int zTreshhold;
     private float z_Pos;
-    private int pieces;
 
     private void OnEnable()
     {
@@ -57,6 +56,8 @@ public class EndGame_Script : MonoBehaviour
     {
         z_Pos = XRRig.transform.position.z;
         pieces_text.text = sceneManager.GetComponent<SceneManagerScript>().getAmountGarbage() +"";
+        ohi_text.text = sceneManager.GetComponent<SceneManagerScript>().getOHIIndex() + "";
+
 
     }
 }
