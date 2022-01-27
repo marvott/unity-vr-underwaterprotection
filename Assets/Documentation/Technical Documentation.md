@@ -53,18 +53,19 @@ We ordered our list of assets into two categories: Imported ones and those, we c
 
 #### 3D Models
 
-* [Whale](https://assetstore.unity.com/packages/3d/characters/animals/fish/humpback-whale-3547)
-* [Coke Can](https://assetstore.unity.com/packages/3d/cola-can-96659)
-* [Sardinia](https://assetstore.unity.com/packages/3d/characters/animals/fish/sardine-37963)
-* [Hands](https://github.com/Novaborn-dev/VR-Hands-with-Unity-XR)
-* [Rocks](https://assetstore.unity.com/packages/3d/props/exterior/pbr-rock-cliffs-pack-105772)
-* [Mugs](https://assetstore.unity.com/packages/3d/props/interior/plates-bowls-mugs-pack-146682)
-* [Ashtrays](https://assetstore.unity.com/packages/3d/props/interior/ashtrays-140632)
-* [Standard Assets Pack](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2018-4-32351)
-* [Bottle](https://blendswap.com/blend/2410)
-* [Nestle Bottle](https://free3d.com/3d-model/plastic-bottle-14620.html)
-* [Cat] (https://www.thingiverse.com/thing:923108/files)
-* [Plastic bag](https://www.turbosquid.com/3d-models/3d-model-pbr-glossiness-1703956#)
+* Whale
+    * Assets/ExternalAssets/Humpback whale/humpback_whale_model_baked_animation.FBX
+    * [LINK ZUM ASSET](https://assetstore.unity.com/packages/3d/characters/animals/fish/humpback-whale-3547)
+* [Coke Can] [LINK ZUM ASSET](https://assetstore.unity.com/packages/3d/cola-can-96659)
+* [Sardinia] [LINK ZUM ASSET](https://assetstore.unity.com/packages/3d/characters/animals/fish/sardine-37963)
+* [Hands] [LINK ZUM ASSET](https://github.com/Novaborn-dev/VR-Hands-with-Unity-XR)
+* [Rocks] [LINK ZUM ASSET](https://assetstore.unity.com/packages/3d/props/exterior/pbr-rock-cliffs-pack-105772)
+* [Standard Assets Pack] [LINK ZUM ASSET](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2018-4-32351)
+* [Bottle] [LINK ZUM ASSET](https://blendswap.com/blend/2410)
+* [Nestle Bottle] [LINK ZUM ASSET](https://free3d.com/3d-model/plastic-bottle-14620.html)
+* [Cat] [LINK ZUM ASSET](https://www.thingiverse.com/thing:923108/files)
+* [Plastic bag] [LINK ZUM ASSET](https://www.turbosquid.com/3d-models/3d-model-pbr-glossiness-1703956#)
+* [Bushes](https://assetstore.unity.com/packages/3d/vegetation/plants/yughues-free-bushes-13168)
 
 #### Textures
 
@@ -95,5 +96,5 @@ We ordered our list of assets into two categories: Imported ones and those, we c
 ## Contact
 
 If you have any further questions, feel free to contact us:
-[Marvin Ottersberg](mailto:marvin.ottersberg@student.fh-kiel.de)
-[Micha Wewers](mailto:micha.t.wewers@student.fh-kiel.de)
+* [Marvin Ottersberg](mailto:marvin.ottersberg@student.fh-kiel.de)
+* [Micha Wewers](mailto:micha.t.wewers@student.fh-kiel.de)
