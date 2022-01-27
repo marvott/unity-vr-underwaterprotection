@@ -11,22 +11,21 @@ using UnityEngine;
 public class SceneManagerScript : MonoBehaviour
 {
     private static bool ropeIsTouched; //Variable is true, when player touches the rope.
-
-    private static int amountGarbage = 0; //Amount of garbage the Player has picked up
-
+    private static int amountGarbage; //Amount of garbage the Player has picked up
+    private static float ohiIndex; //Value of OHI Index.
     private static bool startTriggered = false;
 
-   /***************************************************************************************************************************
-    *Return: ropeIsTouched
-    ***************************************************************************************************************************/
+    /***************************************************************************************************************************
+     *Return: ropeIsTouched
+     ***************************************************************************************************************************/
     public bool isRopeTouched()
     {
         return ropeIsTouched;
     }
 
-   /***************************************************************************************************************************
-    *Set ropeIsTouched to given bool value.
-    ***************************************************************************************************************************/
+    /***************************************************************************************************************************
+     *Set ropeIsTouched to given bool value.
+     ***************************************************************************************************************************/
     public void setRopeIsTouched(bool _ropeIsTouched)
     {
         ropeIsTouched = _ropeIsTouched;
@@ -47,7 +46,24 @@ public class SceneManagerScript : MonoBehaviour
     public void setAmountGarbage(int _amountGarbage)
     {
         amountGarbage = _amountGarbage;
-        
+
+    }
+
+    /***************************************************************************************************************************
+    *Return: ohiIndex
+    ***************************************************************************************************************************/
+    public float getOHIIndex()
+    {
+        return ohiIndex;
+    }
+
+    /***************************************************************************************************************************
+    *Set ohiIndex
+    ***************************************************************************************************************************/
+    public void setOHIIndex(float __ohiIndex)
+    {
+        ohiIndex = __ohiIndex;
+
     }
 
 

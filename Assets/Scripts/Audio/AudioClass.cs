@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class AudioClass
 {
@@ -25,21 +26,29 @@ public class AudioClass
         this.hasToBePlayed = hasToBePlayed;
     }
 
-    public void play()
+    public AudioClip play()
     {
+        if(sceneManager.GetComponent<SceneManagerScript>().getStartTriggered() == false)
+        {
+            return null;
+        }
         if (!hasBeenPlayed)
         {
-            if (!audioSource.isPlaying)
+            if (hasToBePlayed)
             {
+                if (audioSource.isPlaying) return null;
                 audioSource.clip = audioClip;
                 audioSource.Play();
                 hasBeenPlayed = true;
+                return null;
             }
-            if (!hasToBePlayed)
+            else
             {
                 hasBeenPlayed = true;
+                return audioClip;
             }
         }
+        return null;
     }
 
     public bool isTriggered()
