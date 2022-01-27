@@ -6,6 +6,12 @@
  *          MERGE TODO:
  *          Am Ende muss daf?r noch die richtige Taste hinzugef?gt werden
  *          und ohi script aus dem scene manager einf?gen
+ *          ein skript heisst noch "script" -> ändern
+ *          Namen von den Gameobjects sinnvoll benennen
+ *          hierarchie in technical documentation reinschreiben
+ *  
+ *  
+ *  
  *  wal und xrrig und amountpieces wird auf urpsrung gesetzt
  * terrain ver?ndert
  * asset vom holz und die textur auf nem text im canvas
@@ -19,8 +25,8 @@
  *  seil d?nner gemacht
  *  
  *  spawnen von objekten aus einer liste: Garbages und Rocks
- *
- *  
- *  
+ * pflanzen asset hinzugefügt
+ *  spawnObjects in script garbagegrab drin
+
  *  
  */
