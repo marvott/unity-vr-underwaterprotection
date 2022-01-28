@@ -26,17 +26,10 @@ public class spawnObjects : MonoBehaviour
     void Start()
     {
         spawnObject(amountToSpawn);
-
-    }
-
-    void Update()
-    {
-
-
     }
 
     /***************************************************************************************************************************
-     *Spawns an defined amount of garbage objects as garbage prefabs.
+     *Spawns an defined amount of garbage objects as garbage prefabs. The Objects are randomly selected from a list.
      *Parameters: int amount
      ***************************************************************************************************************************/
     public void spawnObject(int amount)

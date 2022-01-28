@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
+/***************************************************************************************************************************
+ *This script enables the Player to restart or end the game when he/she has reached a specified  point along the route and 
+ *is supposed to be finished playing. 
+ ***************************************************************************************************************************/
+
 public class EndGame : MonoBehaviour
 {
     public InputAction restartGame;
@@ -20,26 +25,27 @@ public class EndGame : MonoBehaviour
     {
         restartGame.Enable();
         endGame.Enable();
-
     }
 
     private void Awake()
     {
            restartGame.performed += restartGameFunc;
            endGame.performed += endGameFunc;
-
     }
 
+    //This function restarts the Game and resets all values
     public void restartGameFunc(InputAction.CallbackContext ctx)
     {
         if (z_Pos > zTreshhold)
         {
             sceneManager.GetComponent<SceneManagerScript>().setAmountGarbage(0);
+            sceneManager.GetComponent<SceneManagerScript>().setOHIIndex(0);
             XRRig.transform.position = new Vector3(0.6f,0.91f,-2.36f);
             Whale.transform.position = new Vector3(-38f, 1f, -49f);
         }
     }
 
+    //This function ends the game
     public void endGameFunc(InputAction.CallbackContext ctx)
     {
 
@@ -51,7 +57,8 @@ public class EndGame : MonoBehaviour
 
     }
 
-
+    //This gets the players current position and sets the values on the wooden frame at the end
+    //pieces are the amount of garbage the player has collected and the ohi-index
     private void Update()
     {
         z_Pos = XRRig.transform.position.z;
