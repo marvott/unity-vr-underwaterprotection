@@ -6,7 +6,7 @@ using UnityEngine;
 /***************************************************************************************************************************
  *Spawns Fish in dependency of how much garbage has been collected.
  ***************************************************************************************************************************/
-public class spawnFish : MonoBehaviour
+public class changeWorld : MonoBehaviour
 {
     public GameObject SceneManager;
     public GameObject obj_prefab;
@@ -23,14 +23,16 @@ public class spawnFish : MonoBehaviour
     public int spawnFishgroupEveryXGarbageCollected;
     private int amountOfCollectedGarbage;
     private int oldAmountGarbageValue = 0;
-    
+    public GameObject m_EmissiveObject;
+
+    float emissiveIntensity = 10;
+    Color emissiveColor = Color.green;
+
 
     void Start()
     {
         //Instantiates new FishGroups at Start
         spawnFishGroup(initialFishGroups);
-
-
 
     }
 
@@ -44,6 +46,8 @@ public class spawnFish : MonoBehaviour
         {
             spawnFishGroup(amountOfNewSpawningFishgroups);
             oldAmountGarbageValue = amountOfCollectedGarbage;
+
+            m_EmissiveObject.GetComponent<Renderer>().material.SetColor("_EmissiveColor", emissiveColor * emissiveIntensity);
         }
         
     }

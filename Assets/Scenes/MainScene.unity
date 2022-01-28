@@ -351,7 +351,8 @@ MonoBehaviour:
   z_end: 50
   initialFishGroups: 50
   amountOfNewSpawningFishgroups: 4
-  spawnFishgroupEveryXGarbageCollected: 5
+  spawnFishgroupEveryXGarbageCollected: 1
+  m_EmissiveObject: {fileID: 490503007}
 --- !u!4 &73260209
 Transform:
   m_ObjectHideFlags: 0
@@ -1745,6 +1746,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &490503007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1253365200111527890, guid: 8109e9e16ba4cc04b8e0928aea897927, type: 3}
+  m_PrefabInstance: {fileID: 1371108131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &497355982
 GameObject:
   m_ObjectHideFlags: 0
