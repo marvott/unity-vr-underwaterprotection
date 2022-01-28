@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-public class EndGame_Script : MonoBehaviour
+public class EndGame : MonoBehaviour
 {
     public InputAction restartGame;
     public InputAction endGame;
@@ -56,7 +56,7 @@ public class EndGame_Script : MonoBehaviour
     {
         z_Pos = XRRig.transform.position.z;
         pieces_text.text = sceneManager.GetComponent<SceneManagerScript>().getAmountGarbage() +"";
-        ohi_text.text = sceneManager.GetComponent<SceneManagerScript>().getOHIIndex() + "";
+        ohi_text.text = sceneManager.GetComponent<SceneManagerScript>().getOHIIndex()*100 + "";
 
 
     }

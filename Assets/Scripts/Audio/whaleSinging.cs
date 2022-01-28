@@ -9,6 +9,7 @@ public class whaleSinging : MonoBehaviour
     public GameObject Whale_Obj;
     private float player_zPos;
     public float triggerAudioIfPlayerAtZPos;
+    public float triggerStopAudioAtZPos;
     private bool hasBeenPlayed = false;
     public AudioSource mainAudioSource;
     //public UnityEvent playVoiceAfterDiscovery;
@@ -21,6 +22,11 @@ public class whaleSinging : MonoBehaviour
         {
             Whale_Obj.GetComponent<AudioSource>().Play();
             hasBeenPlayed = true;
+        }
+
+        if(player_zPos > triggerStopAudioAtZPos)
+        {
+            Whale_Obj.GetComponent<AudioSource>().Stop();
         }
     }
 }
