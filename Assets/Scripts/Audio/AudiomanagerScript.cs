@@ -99,5 +99,4 @@ public class AudiomanagerScript : MonoBehaviour
         savedClip = null;
         watch.GetComponent<watchScript>().setIncomingMessage(false);
     }
-
 }

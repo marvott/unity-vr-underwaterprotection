@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="audioAtEnd">
+    <Position X="0.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAAAAAAAAACCAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Audio\audioAtEnd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioClass">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAABQBCAkAAAAEAAJAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Audio\AudioClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="whaleSinging">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAgEAAAAAAAAAAAAAAAAIBAIAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Audio\whaleSinging.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudiomanagerScript">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAgAACiABCAAAgAEAAAAAABAAEAAAAAAABAAAEEA=</HashCode>
+      <FileName>Assets\Scripts\Audio\AudiomanagerScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="destroyGarbage">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interaction\destroyGarbage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EndGame">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAACAAARAAAARAAAIAAABCABABACEA=</HashCode>
+      <FileName>Assets\Scripts\Interaction\EndGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="hapticImpulse">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAEAAAAAAAAAAAgAAAAAAAAAAABAgAA=</HashCode>
+      <FileName>Assets\Scripts\Interaction\hapticImpulse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectInFieldOfView">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAJAAgAAAQAAAAgAAAABBBAAAAAAAAAAAACAhAA=</HashCode>
+      <FileName>Assets\Scripts\Interaction\ObjectInFieldOfView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sendHapticImpulse">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAIAABQAAAAAAAAAAAAEAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Interaction\sendHapticImpulse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="startGame">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAgAAAAAAAAABAAAABIAAAABAACCGA=</HashCode>
+      <FileName>Assets\Scripts\Interaction\startGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="watchScript">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAABwACAAAgAAAEBICAAAABAAAAACAAABAAAgCEQ=</HashCode>
+      <FileName>Assets\Scripts\Interaction\watchScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.XR.Interaction.Toolkit.dragMovementSystem">
+    <Position X="25.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAECAAgAAAAEAAAAAAAAAQAAAAABAAAAAAEAACAQ=</HashCode>
+      <FileName>Assets\Scripts\Movement_Scripts\dragMovementSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RopeGrabbed">
+    <Position X="27.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Scripts\Movement_Scripts\RopeGrabbed.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="spawnObjects">
+    <Position X="30.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAIACACDQAAAAAAAAAIgAAAIAAAAAAAAgAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\spawnObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneManagerScript">
+    <Position X="35" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAggAAACAgAAAAAIACAAAACAIAAAAAAAAAICAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Other\SceneManagerScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="changeWorld">
+    <Position X="39" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACAAASBiBYAQAACAAQAoAIAgICAAAAAAAAAIAAAAQ=</HashCode>
+      <FileName>Assets\Scripts\World\changeWorld.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="whaleScript">
+    <Position X="40.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\World\whaleScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
