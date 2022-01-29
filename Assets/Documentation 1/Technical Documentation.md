@@ -11,6 +11,8 @@ In this technical Documentation you'll find everything you need to start using a
 
 Unity Version: 2020.3.16f1
 
+## Hierachy
+
 ## Folders
 
 The Unity-Project is organised into these folders:
