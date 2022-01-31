@@ -6257,7 +6257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LineWidth: 0.02
   m_OverrideInteractorLineLength: 1
-  m_LineLength: 80
+  m_LineLength: 100
   m_WidthCurve:
     serializedVersion: 2
     m_Curve:
@@ -8632,7 +8632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj_prefab: {fileID: 0}
   parentObj: {fileID: 504994937}
-  amountToSpawn: 180
+  amountToSpawn: 100
   x_start: 2
   x_end: 15
   y: 0.6
@@ -8658,7 +8658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj_prefab: {fileID: 0}
   parentObj: {fileID: 504994937}
-  amountToSpawn: 180
+  amountToSpawn: 100
   x_start: -13
   x_end: -1.5
   y: 0.4

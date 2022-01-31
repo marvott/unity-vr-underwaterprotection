@@ -65,14 +65,14 @@ public class changeWorld : MonoBehaviour
             //Adds Garbage Objects into Parent Folder for better Overview
             childObject.transform.SetParent(parentObj.transform);
             childObject.tag = "FishGroup";
-
-            if ( i%3==0)
+            //TODO: Hier wollte Marvin noch mal drauf schauen!
+            /*if ( i%3==0)
             {
                 childObject.GetComponent<Rigidbody>().velocity = transform.forward * 0.1f;
             }else
             {
                 childObject.GetComponent<Rigidbody>().velocity = -transform.forward * 0.1f;
-            }
+            }*/
         }
     }
 }
