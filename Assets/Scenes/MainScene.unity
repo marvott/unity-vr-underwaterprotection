@@ -344,9 +344,9 @@ MonoBehaviour:
   obj_prefab: {fileID: 1399896037}
   parentObj: {fileID: 254868408}
   x_start: -20
-  x_end: 10
-  y_start: -0.6
-  y_end: 3
+  x_end: 5
+  y_start: -5
+  y_end: 0
   z_start: -5
   z_end: 50
   initialFishGroups: 50
