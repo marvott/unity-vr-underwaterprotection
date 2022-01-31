@@ -4594,6 +4594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hanging_package
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3336f609c90746c46bd9323108a2b329, type: 3}
+      propertyPath: m_TagString
+      value: Garbage
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3336f609c90746c46bd9323108a2b329, type: 3}
 --- !u!4 &1155013399 stripped
@@ -8177,6 +8181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cola Can
       objectReference: {fileID: 0}
+    - target: {fileID: 1705129010167144, guid: bfa7e8189ab181843b9ac106678a628a, type: 3}
+      propertyPath: m_TagString
+      value: Garbage
+      objectReference: {fileID: 0}
     - target: {fileID: 4528477828364640, guid: bfa7e8189ab181843b9ac106678a628a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9630,6 +9638,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1531131956}
+    - target: {fileID: 1263520361402900325, guid: 0ef1a8b04ff004ff79bc2e60e5d82148, type: 3}
+      propertyPath: m_TagString
+      value: Garbage
+      objectReference: {fileID: 0}
     - target: {fileID: 1928452958565221855, guid: 0ef1a8b04ff004ff79bc2e60e5d82148, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.087
@@ -9689,6 +9701,10 @@ PrefabInstance:
     - target: {fileID: 7127110944040138865, guid: 0ef1a8b04ff004ff79bc2e60e5d82148, type: 3}
       propertyPath: m_Name
       value: Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127110944040138865, guid: 0ef1a8b04ff004ff79bc2e60e5d82148, type: 3}
+      propertyPath: m_TagString
+      value: Garbage
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3739493550705091806, guid: 0ef1a8b04ff004ff79bc2e60e5d82148, type: 3}
