@@ -36,14 +36,16 @@ public class AudiomanagerScript : MonoBehaviour
         audioClasses.Add(audio1);
         AudioClass audio2 = new AudioClass(audioSource, audioList[2], 5, 0, sceneManager, XRRig, false);
         audioClasses.Add(audio2);
-        AudioClass audio3 = new AudioClass(audioSource, audioList[3], 8, 0, sceneManager, XRRig, false);
-        audioClasses.Add(audio3);
-        AudioClass audiowal = new AudioClass(audioSource, audioList[6], 13, 0, sceneManager, XRRig, false);
-        audioClasses.Add(audiowal);
-        //AudioClass audio4 = new AudioClass(audioSource, audioList[4], 27, 0, sceneManager, XRRig, false);
-        //audioClasses.Add(audio4);
-        AudioClass audio5 = new AudioClass(audioSource, audioList[5], 34, 0, sceneManager, XRRig, true);
+        /*AudioClass audio3 = new AudioClass(audioSource, audioList[3], 37, 0, sceneManager, XRRig, false);
+        audioClasses.Add(audio3);*/
+        AudioClass audio4 = new AudioClass(audioSource, audioList[4], 37, 0, sceneManager, XRRig, false);
+        audioClasses.Add(audio4);
+        AudioClass audio5 = new AudioClass(audioSource, audioList[5], 15, 0, sceneManager, XRRig, false);
         audioClasses.Add(audio5);
+        AudioClass audio6 = new AudioClass(audioSource, audioList[6], 30, 0, sceneManager, XRRig, false);
+        audioClasses.Add(audio6);
+        AudioClass audio7 = new AudioClass(audioSource, audioList[7], 44, 0, sceneManager, XRRig, true);
+        audioClasses.Add(audio7);
         watch = GameObject.Find("WatchView");
 
         mainCamera = XRRig.transform.GetChild(0).gameObject;
@@ -71,7 +73,6 @@ public class AudiomanagerScript : MonoBehaviour
                         righthandController.GetComponent<hapticImpulse>().custAmplitImpulse(1f, 0.7f);
                         watch.GetComponent<watchScript>().setIncomingMessage(true);
                     }
-                    audioClasses.Remove(x);
                 }
             }
         }
