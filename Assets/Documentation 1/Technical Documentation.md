@@ -39,7 +39,7 @@ The Unity-Project is organised into these folders:
 
 ### State Diagram
 
-
+#### Scripts
 
 Every script starts with a clear description of what it's for.
 
@@ -102,10 +102,12 @@ are part of a specific package but are not used in the game are not included.
 
 * [Wood-Textures](https://assetstore.unity.com/packages/2d/textures-materials/wood/hand-painted-seamless-wood-texture-vol-6-162145)
 
-#### Scripts
+
 
 #### Audio
-
+* We created a new Underwater Effect in Audition from these two Audiofiles
+    * [Underwater Ambience](https://freesound.org/people/YoloSwaggings/sounds/406623/)
+    * [Underwater Bubbles](https://freesound.org/people/Robinhood76/sounds/96742/)
 * [Humpback Whale Song from Monterey Bay](https://www.youtube.com/watch?v=5tRMqbPH_pk)
 
 #### Tools
