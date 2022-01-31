@@ -46,7 +46,7 @@ public class startGame : MonoBehaviour
 
     private void disableText()
     {
-        gameObject.active = false;
+        gameObject.SetActive(false);
     }
     
 }

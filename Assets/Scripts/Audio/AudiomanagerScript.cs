@@ -56,7 +56,7 @@ public class AudiomanagerScript : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (sceneManager.GetComponent<SceneManagerScript>().getStartTriggered())
         {
@@ -71,6 +71,7 @@ public class AudiomanagerScript : MonoBehaviour
                         righthandController.GetComponent<hapticImpulse>().custAmplitImpulse(1f, 0.7f);
                         watch.GetComponent<watchScript>().setIncomingMessage(true);
                     }
+                    audioClasses.Remove(x);
                 }
             }
         }
