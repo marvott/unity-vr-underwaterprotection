@@ -4910,8 +4910,8 @@ MonoBehaviour:
       - {x: 56.21149, y: 18.085432, z: -0.7155864}
       - {x: 67.43825, y: 19.34104, z: 0.9273796}
       - {x: 83.13454, y: 21.096523, z: 3.224434}
-      - {x: 101.94786, y: 99.83088, z: 1.4578648}
-      - {x: 102.286095, y: 100, z: 1.4578648}
+      - {x: 126.44317, y: 1.1857529, z: 1.6191769}
+      - {x: 126.098305, y: 0.3881693, z: 1.4578648}
       isClosed: 0
       space: 0
       controlMode: 0
@@ -4931,7 +4931,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
