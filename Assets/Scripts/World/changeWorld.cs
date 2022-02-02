@@ -23,10 +23,6 @@ public class changeWorld : MonoBehaviour
     public int spawnFishgroupEveryXGarbageCollected;
     private int amountOfCollectedGarbage;
     private int oldAmountGarbageValue = 0;
-    public GameObject m_EmissiveObject;
-
-    float emissiveIntensity = 10;
-    Color emissiveColor = Color.green;
 
 
     void Start()
@@ -46,8 +42,6 @@ public class changeWorld : MonoBehaviour
         {
             spawnFishGroup(amountOfNewSpawningFishgroups);
             oldAmountGarbageValue = amountOfCollectedGarbage;
-
-            m_EmissiveObject.GetComponent<Renderer>().material.SetColor("_EmissiveColor", emissiveColor * emissiveIntensity);
         }
         
     }
@@ -65,14 +59,7 @@ public class changeWorld : MonoBehaviour
             //Adds Garbage Objects into Parent Folder for better Overview
             childObject.transform.SetParent(parentObj.transform);
             childObject.tag = "FishGroup";
-            //TODO: Hier wollte Marvin noch mal drauf schauen!
-            /*if ( i%3==0)
-            {
-                childObject.GetComponent<Rigidbody>().velocity = transform.forward * 0.1f;
-            }else
-            {
-                childObject.GetComponent<Rigidbody>().velocity = -transform.forward * 0.1f;
-            }*/
+
         }
     }
 }
