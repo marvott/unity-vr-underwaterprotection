@@ -591,6 +591,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5725877982877224326, guid: cd66aa848fa12a54aa0d9a45e72c2bdc, type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
     - target: {fileID: 5725877982877224347, guid: cd66aa848fa12a54aa0d9a45e72c2bdc, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 12
@@ -2414,7 +2418,7 @@ GameObject:
   - component: {fileID: 608298634}
   - component: {fileID: 608298633}
   m_Layer: 5
-  m_Name: Anzeige
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3023,7 +3027,6 @@ GameObject:
   - component: {fileID: 826614506}
   - component: {fileID: 826614505}
   - component: {fileID: 826614504}
-  - component: {fileID: 826614503}
   - component: {fileID: 826614502}
   m_Layer: 0
   m_Name: EndRope
@@ -3152,19 +3155,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &826614503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826614500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 641d6ce39a591aa4b98eb49781e6acc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneManager: {fileID: 1053432517}
 --- !u!54 &826614504
 Rigidbody:
   m_ObjectHideFlags: 0

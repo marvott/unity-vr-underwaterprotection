@@ -8,7 +8,7 @@ using UnityEngine;
  *The Path-Follower is then being enabled and the whale swims along the path
  ***************************************************************************************************************************/
 
-public class whaleScript : MonoBehaviour
+public class activateWhale: MonoBehaviour
 {
     public void whaleInViewField()
     {
