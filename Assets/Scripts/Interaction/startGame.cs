@@ -30,7 +30,7 @@ public class startGame : MonoBehaviour
         //gameObject.GetComponent<Text>().fontSize = 10;
         gameObject.GetComponent<Text>().text = "Umgesetzt durch Marvin Ottersberg & Micha Wewers, 2022 FH-Kiel";
         sceneManager.GetComponent<SceneManagerScript>().setStartTriggered(true);
-        Invoke("disableText", 3f);
+        Invoke("disableText", 5f);
     }
 
     public void permittedAction(InputAction.CallbackContext ctx)
