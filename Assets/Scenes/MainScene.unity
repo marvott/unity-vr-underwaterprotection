@@ -350,7 +350,7 @@ MonoBehaviour:
   z_start: -5
   z_end: 50
   initialFishGroups: 50
-  amountOfNewSpawningFishgroups: 4
+  amountOfNewSpawningFishgroups: 3
   spawnFishgroupEveryXGarbageCollected: 5
 --- !u!4 &73260209
 Transform:
@@ -8439,7 +8439,7 @@ MonoBehaviour:
   amountToSpawn: 100
   x_start: 2
   x_end: 15
-  y: 0.6
+  y: 0
   z_start: -5
   z_end: 50
   PrefabsList:
@@ -8465,7 +8465,7 @@ MonoBehaviour:
   amountToSpawn: 100
   x_start: -13
   x_end: -1.5
-  y: 0.4
+  y: 0
   z_start: -5
   z_end: 50
   PrefabsList:
@@ -9599,7 +9599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3056294003705243968, guid: fba8ee236a8b14ce1b0584d9a5743a88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.793
+      value: 3.172
       objectReference: {fileID: 0}
     - target: {fileID: 3056294003705243968, guid: fba8ee236a8b14ce1b0584d9a5743a88, type: 3}
       propertyPath: m_LocalPosition.z

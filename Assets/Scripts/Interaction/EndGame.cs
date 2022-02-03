@@ -78,7 +78,7 @@ public class EndGame : MonoBehaviour
     {
         z_Pos = XRRig.transform.position.z;
         pieces_text.text = sceneManager.GetComponent<SceneManagerScript>().getAmountGarbage() +"";
-        ohi_text.text = sceneManager.GetComponent<SceneManagerScript>().getOHIIndex()*100 + "";
+        ohi_text.text = sceneManager.GetComponent<SceneManagerScript>().getOHIIndex() + "";
 
 
     }
