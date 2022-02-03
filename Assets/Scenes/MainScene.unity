@@ -1545,8 +1545,6 @@ GameObject:
   m_Component:
   - component: {fileID: 414385677}
   - component: {fileID: 414385676}
-  - component: {fileID: 414385675}
-  - component: {fileID: 414385674}
   m_Layer: 0
   m_Name: Locomotion System
   m_TagString: Untagged
@@ -1554,58 +1552,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &414385674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414385673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 414385676}
-  m_TurnAmount: 45
-  m_DebounceTime: 0.5
-  m_EnableTurnLeftRight: 1
-  m_EnableTurnAround: 1
-  m_LeftHandSnapTurnAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Left Hand Snap Turn
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 3c4b1c67-1447-48c2-bf21-760ddc01372f
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-    m_Reference: {fileID: 0}
-  m_RightHandSnapTurnAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Right Hand Snap Turn
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: d3651fde-0c2a-4a01-a7ed-4bf22cdb4a75
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-    m_Reference: {fileID: 0}
---- !u!114 &414385675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414385673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 414385676}
 --- !u!114 &414385676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3470,7 +3416,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 856025723}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -3730,7 +3676,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 856025723}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4000,7 +3946,6 @@ GameObject:
   - component: {fileID: 1117733781}
   - component: {fileID: 1117733780}
   - component: {fileID: 1117733779}
-  - component: {fileID: 1117733782}
   - component: {fileID: 1117733783}
   m_Layer: 0
   m_Name: XR Rig
@@ -4057,46 +4002,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1117733782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117733778}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 0}
-  m_MoveSpeed: 1
-  m_EnableStrafe: 1
-  m_UseGravity: 1
-  m_GravityApplicationMode: 0
-  m_ForwardSource: {fileID: 0}
-  m_LeftHandMoveAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Hand Move
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 75f1b245-c357-48c8-9acb-8967bec9dda2
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_RightHandMoveAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Right Hand Move
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 6bf6c732-e011-46b1-acc5-b649a4ec5f10
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!114 &1117733783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4931,7 +4836,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -5790,11 +5695,11 @@ MonoBehaviour:
       - {x: 5.9820743, y: 0.50230104, z: -1.6509144}
       - {x: 14.7620125, y: -0.1530852, z: 0.73855954}
       - {x: 23.857178, y: -0.8320019, z: 3.213823}
-      - {x: 37.768044, y: 0.51788795, z: -1.2464561}
+      - {x: 37.76805, y: 0.51789236, z: -1.2464509}
       - {x: 41.482002, y: 1.8757162, z: 0.937412}
-      - {x: 49.661495, y: 4.8661504, z: 5.747088}
-      - {x: 64.10139, y: 4.612964, z: 1.2102354}
-      - {x: 68.05763, y: 3.7487473, z: 1.4752957}
+      - {x: 49.66152, y: 4.866155, z: 5.7470994}
+      - {x: 64.10145, y: 4.612964, z: 1.2102354}
+      - {x: 68.05766, y: 3.7487473, z: 1.4752957}
       isClosed: 0
       space: 0
       controlMode: 0
