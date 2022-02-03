@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using PathCreation.Examples;
 
 /***************************************************************************************************************************
  *This script enables the Player to restart or end the game when he/she has reached a specified  point along the route and 
@@ -19,6 +20,9 @@ public class EndGame : MonoBehaviour
     public GameObject XRRig;
     public GameObject Whale;
     public int zTreshhold;
+    public GameObject parentObjects;
+    public List<GameObject> prefabsList;
+    private SpawnObjects spawnObjects;
     private float z_Pos;
 
     private void OnEnable()
@@ -41,7 +45,18 @@ public class EndGame : MonoBehaviour
             sceneManager.GetComponent<SceneManagerScript>().setAmountGarbage(0);
             sceneManager.GetComponent<SceneManagerScript>().setOHIIndex(0);
             XRRig.transform.position = new Vector3(0.6f,0.91f,-2.36f);
-            Whale.transform.position = new Vector3(-38f, 1f, -49f);
+            spawnObjects = GameObject.Find("SpawningObjects").GetComponent<SpawnObjects>();
+            GameObject.Find("WatchText").GetComponent<WatchScript>().resetWatch();
+            spawnObjects.parentObj = parentObjects;
+            spawnObjects.PrefabsList = prefabsList;
+            spawnObjects.x_start = -1.8f;
+            spawnObjects.x_end = 2.5f;
+            spawnObjects.y = 0.6f;
+            spawnObjects.z_start = -5f;
+            spawnObjects.z_end = 45f;
+            spawnObjects.spawnObject(150 - sceneManager.GetComponent<SceneManagerScript>().getAmountGarbage());
+
+
         }
     }
 

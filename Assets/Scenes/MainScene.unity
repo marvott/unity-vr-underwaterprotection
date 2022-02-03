@@ -5219,6 +5219,11 @@ MonoBehaviour:
   XRRig: {fileID: 1117733778}
   Whale: {fileID: 8296172668153606330}
   zTreshhold: 45
+  parentObjects: {fileID: 1520388606}
+  prefabsList:
+  - {fileID: 1859997975}
+  - {fileID: 1155013400}
+  - {fileID: 1639067430}
 --- !u!1001 &1368434188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9269,7 +9274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4803856291760739905}
   m_LocalRotation: {x: -0, y: 0.36458382, z: -0, w: 0.9311706}
-  m_LocalPosition: {x: 29.23, y: 7.17, z: 19.77}
+  m_LocalPosition: {x: 29.23, y: 8.11, z: 19.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5006512736374309545}

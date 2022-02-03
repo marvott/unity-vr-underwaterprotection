@@ -122,6 +122,14 @@ public class WatchScript : MonoBehaviour
         }
     }
 
+    public void resetWatch()
+    {
+        OHIText = "OHI: " + SceneManager.GetComponent<SceneManagerScript>().getOHIIndex();
+        piecesText = "Pieces: " + SceneManager.GetComponent<SceneManagerScript>().getAmountGarbage();
+        updateWatch();
+
+    }
+
     public void stillPlaying()
     {
         thisText.text = "Audio still playing!";
