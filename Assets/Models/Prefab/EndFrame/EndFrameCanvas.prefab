@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 6402846972214889266}
   - component: {fileID: 6402846972214889267}
   - component: {fileID: 6402846972214889264}
-  - component: {fileID: 6402846972214889260}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: EndFrameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,56 +103,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6402846972214889260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6402846972214889270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d29c5a242026d43a10e7492c35eb03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  restartGame:
-    m_Name: Restart Game
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 14053c4b-fea6-400d-a171-17796b2121e8
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 1d3c9523-e4d6-4806-8eda-cbd4e3fbcdba
-      m_Path: <XRController>{RightHand}/triggerButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Restart Game
-      m_Flags: 0
-  endGame:
-    m_Name: End Game
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 46c2e1ea-7a97-4665-b416-555e663801d6
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 33f8275d-f8f6-4f4d-afd4-b7fa65b7568b
-      m_Path: <XRController>{LeftHand}/triggerButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: End Game
-      m_Flags: 0
-  sceneManager: {fileID: 0}
-  pieces_text: {fileID: 6402846972951224280}
-  ohi_text: {fileID: 6402846973249359325}
-  XRRig: {fileID: 0}
-  Whale: {fileID: 0}
-  zTreshhold: 45
 --- !u!1001 &1474650900245832457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -358,17 +307,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 88107495522083951, guid: ce14ff00ac6edb14fbc0bd00c00198c9, type: 3}
   m_PrefabInstance: {fileID: 6476877929125128589}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6402846973249359325 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 88107495522083920, guid: ce14ff00ac6edb14fbc0bd00c00198c9, type: 3}
-  m_PrefabInstance: {fileID: 6476877929125128589}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7504305441115206090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -573,14 +511,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3361861924619727403, guid: d27dae2115a16434a89be347f5970969, type: 3}
   m_PrefabInstance: {fileID: 8537911191365742066}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6402846972951224280 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3361861924619727402, guid: d27dae2115a16434a89be347f5970969, type: 3}
-  m_PrefabInstance: {fileID: 8537911191365742066}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

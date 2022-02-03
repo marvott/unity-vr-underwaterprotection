@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
  *This script spawns garbage objects at random places on the map. When needed any number of garbage objects can be spawned at
  *different places on the map.
  ***************************************************************************************************************************/
-public class spawnObjects : MonoBehaviour
+public class SpawnObjects : MonoBehaviour
 {
     public GameObject obj_prefab;
     private GameObject childObject;

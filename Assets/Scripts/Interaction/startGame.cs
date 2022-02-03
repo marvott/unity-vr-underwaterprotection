@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-public class startGame : MonoBehaviour
+public class StartGame : MonoBehaviour
 {
 
     public InputAction start;

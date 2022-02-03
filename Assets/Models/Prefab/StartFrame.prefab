@@ -42,7 +42,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8840445234799523411, guid: 54796b1b1c016fe49af1a30f891bb259, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: StartFrameCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 8840445234799523412, guid: 54796b1b1c016fe49af1a30f891bb259, type: 3}
       propertyPath: m_Pivot.x
@@ -200,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4184360149971038953, guid: 9a12b5958f2852243ab56d5c818dee45, type: 3}
       propertyPath: m_Name
-      value: Cylinder
+      value: Stick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a12b5958f2852243ab56d5c818dee45, type: 3}

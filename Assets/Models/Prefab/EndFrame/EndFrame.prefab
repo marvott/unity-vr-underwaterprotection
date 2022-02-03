@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5055275067011969770, guid: d77fa9acb1ccfee449d7196ac1fc525c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d77fa9acb1ccfee449d7196ac1fc525c, type: 3}
 --- !u!4 &4789428477141089263 stripped
@@ -199,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402846972214889270, guid: 529f268cc116e2b4f9c9347b0b7423e6, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: EndFrameCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 529f268cc116e2b4f9c9347b0b7423e6, type: 3}

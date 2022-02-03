@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 54503909}
   - component: {fileID: 54503908}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: WatchBody(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1746,7 +1746,7 @@ GameObject:
   - component: {fileID: 497355985}
   - component: {fileID: 497355984}
   m_Layer: 0
-  m_Name: Teleportation Area
+  m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1981,7 +1981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5506214941638191925, guid: a365d3a38629849bea54ad0b6f18ea2a, type: 3}
       propertyPath: m_Name
-      value: body
+      value: FrontBody
       objectReference: {fileID: 0}
     - target: {fileID: 6651099584605232059, guid: a365d3a38629849bea54ad0b6f18ea2a, type: 3}
       propertyPath: m_RootOrder
@@ -2256,7 +2256,7 @@ GameObject:
   - component: {fileID: 608298634}
   - component: {fileID: 608298633}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ViewFieldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3622,7 +3622,7 @@ GameObject:
   - component: {fileID: 1013619590}
   - component: {fileID: 1013619589}
   m_Layer: 5
-  m_Name: Canvas-Uhr
+  m_Name: WatchCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5063,6 +5063,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4789428476885516968, guid: 0dbee7528b0c8294d8e31ce6b4ffa474, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4789428477141089261, guid: 0dbee7528b0c8294d8e31ce6b4ffa474, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7088,7 +7092,7 @@ GameObject:
   - component: {fileID: 1685898043}
   - component: {fileID: 1685898042}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: WatchBody(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8622,7 +8626,7 @@ GameObject:
   - component: {fileID: 2113693697}
   - component: {fileID: 2113693696}
   m_Layer: 5
-  m_Name: WatchView
+  m_Name: WatchText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9755,7 +9759,7 @@ GameObject:
   - component: {fileID: 1586948536}
   - component: {fileID: 1586948537}
   m_Layer: 0
-  m_Name: humpback_whale_model_baked_animation
+  m_Name: Whale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

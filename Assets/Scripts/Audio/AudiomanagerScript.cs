@@ -46,7 +46,7 @@ public class AudiomanagerScript : MonoBehaviour
         audioClasses.Add(audio6);
         AudioClass audio7 = new AudioClass(audioSource, audioList[7], 44, 0, sceneManager, XRRig, true);
         audioClasses.Add(audio7);
-        watch = GameObject.Find("WatchView");
+        watch = GameObject.Find("WatchText");
 
         mainCamera = XRRig.transform.GetChild(0).gameObject;
         foreach (Transform child in mainCamera.transform)
@@ -70,8 +70,8 @@ public class AudiomanagerScript : MonoBehaviour
                     if (playAudio != null)
                     {
                         savedClip = playAudio;
-                        righthandController.GetComponent<hapticImpulse>().custAmplitImpulse(1f, 0.7f);
-                        watch.GetComponent<watchScript>().setIncomingMessage(true);
+                        righthandController.GetComponent<HapticImpulse>().custAmplitImpulse(1f, 0.7f);
+                        watch.GetComponent<WatchScript>().setIncomingMessage(true);
                     }
                 }
             }
@@ -84,12 +84,12 @@ public class AudiomanagerScript : MonoBehaviour
         {
             if (audioSource.isPlaying)
             {
-                watch.GetComponent<watchScript>().stillPlaying();
-                righthandController.GetComponent<hapticImpulse>().custAmplitImpulse(1f, 0.7f);
+                watch.GetComponent<WatchScript>().stillPlaying();
+                righthandController.GetComponent<HapticImpulse>().custAmplitImpulse(1f, 0.7f);
                 return;
             }
             audioSource.clip = savedClip;
-            watch.GetComponent<watchScript>().setIncomingMessage(false);
+            watch.GetComponent<WatchScript>().setIncomingMessage(false);
             audioSource.Play();
             savedClip = null;
         }
@@ -99,6 +99,6 @@ public class AudiomanagerScript : MonoBehaviour
     public void declineSaved(InputAction.CallbackContext ctx)
     {
         savedClip = null;
-        watch.GetComponent<watchScript>().setIncomingMessage(false);
+        watch.GetComponent<WatchScript>().setIncomingMessage(false);
     }
 }

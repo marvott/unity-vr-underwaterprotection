@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class hapticImpulse : MonoBehaviour
+public class HapticImpulse : MonoBehaviour
 {
     public ActionBasedController controller;
     public float defaultAmplitude;

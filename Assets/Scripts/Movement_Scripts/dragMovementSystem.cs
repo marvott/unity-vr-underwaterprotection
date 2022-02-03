@@ -6,7 +6,7 @@
 
 namespace UnityEngine.XR.Interaction.Toolkit
 {
-    public class dragMovementSystem : ContinuousMoveProviderBase
+    public class DragMovementSystem : ContinuousMoveProviderBase
     {
         public GameObject SceneManager;
         public ActionBasedController controller; //LeftHand Controller.

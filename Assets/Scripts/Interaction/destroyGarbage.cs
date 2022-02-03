@@ -8,7 +8,7 @@ using UnityEngine;
  *right hand.
  ***************************************************************************************************************************/
 
-public class destroyGarbage : MonoBehaviour
+public class DestroyGarbage : MonoBehaviour
 {
     /*********************************************************************************************************************
      *Function is called to destroy the garbage which is collected.

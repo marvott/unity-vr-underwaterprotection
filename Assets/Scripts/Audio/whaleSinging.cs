@@ -8,7 +8,7 @@ using UnityEngine.Events;
  *because we need to play multiple other audios at the same time.
  ***************************************************************************************************************************/
 
-public class whaleSinging : MonoBehaviour
+public class WhaleSinging : MonoBehaviour
 {
     public GameObject XRRig;
     public GameObject Whale_Obj;

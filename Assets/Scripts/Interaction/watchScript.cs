@@ -11,7 +11,7 @@ using UnityEngine.UI;
  *the initial value for the watch.
  ***************************************************************************************************************************/
 
-public class watchScript : MonoBehaviour
+public class WatchScript : MonoBehaviour
 {
 
     public Text thisText;

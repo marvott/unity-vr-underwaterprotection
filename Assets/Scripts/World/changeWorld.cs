@@ -6,7 +6,7 @@ using UnityEngine;
 /***************************************************************************************************************************
  *Spawns Fish in dependency of how much garbage has been collected.
  ***************************************************************************************************************************/
-public class changeWorld : MonoBehaviour
+public class ChangeWorld : MonoBehaviour
 {
     public GameObject SceneManager;
     public GameObject obj_prefab;
