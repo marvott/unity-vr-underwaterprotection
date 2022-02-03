@@ -3,8 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 /***************************************************************************************************************************
- *We are listening for Changes in how many pieces of Garbage have been collected. If the first one has been collected the 
- *first Audio Source is being played
+ *This script is meant to manage the scientist's audio clips. It takes advantage of the functionality of AudioClass and 
+ *stores optional messages/audio till they are played or rejected by the player.
  ***************************************************************************************************************************/
 
 public class AudiomanagerScript : MonoBehaviour
@@ -27,6 +27,10 @@ public class AudiomanagerScript : MonoBehaviour
         declineSavedClip.performed += declineSaved;
     }
 
+    /***************************************************************************************************************************
+     *In start function AudioClasses are created out of the given audio clips. The params in the constructor defines the trigger
+     *for the given audio clip.
+     ***************************************************************************************************************************/
     private void Start()
     {
         audioClasses = new List<AudioClass>();
@@ -58,6 +62,10 @@ public class AudiomanagerScript : MonoBehaviour
         }
     }
 
+    /***************************************************************************************************************************
+     *In update function every AudioClass is checked if it has been triggered. Mandatory audios have a return value of null and
+     *are played directly. Optional audios are stored till the player decides to play them.
+     ***************************************************************************************************************************/
     private void Update()
     {
         if (sceneManager.GetComponent<SceneManagerScript>().getStartTriggered())
@@ -78,6 +86,9 @@ public class AudiomanagerScript : MonoBehaviour
         }
     }
 
+    /***************************************************************************************************************************
+     *Function used to play a saved optional audio.
+     ***************************************************************************************************************************/
     public void playSaved(InputAction.CallbackContext ctx)
     {
         if (savedClip != null)
@@ -96,6 +107,9 @@ public class AudiomanagerScript : MonoBehaviour
 
     }
 
+    /***************************************************************************************************************************
+     *Function used to reject an optional audio.
+     ***************************************************************************************************************************/
     public void declineSaved(InputAction.CallbackContext ctx)
     {
         savedClip = null;

@@ -4,12 +4,14 @@ using PathCreation.Examples;
 using UnityEngine;
 
 /***************************************************************************************************************************
- *This function is called, when the player looked directly at the whale.
- *The Path-Follower is then being enabled and the whale swims along the path
+ *This script is used to activate the whale.
  ***************************************************************************************************************************/
 
 public class ActivateWhale: MonoBehaviour
 {
+    /***************************************************************************************************************************
+     *This function is called when the player looks at the whale. 
+     ***************************************************************************************************************************/
     public void whaleInViewField()
     {
         gameObject.GetComponent<PathFollower>().enabled = true;

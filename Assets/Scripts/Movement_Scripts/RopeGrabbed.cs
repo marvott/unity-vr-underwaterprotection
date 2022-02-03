@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 /***************************************************************************************************************************
- *This script provides functions which can be called when a Controller interacts with objects. 
+ *This script provides functions which can be called when a Controller interacts with the rope. 
  ***************************************************************************************************************************/
 public class RopeGrabbed : MonoBehaviour
 {
     public GameObject SceneManager;
     /***************************************************************************************************************************
-    *This function is called directly when an object is selected. Depending on the object which is selected different code is run.
+    *This function is called directly when an object is selected. If the selected object is the rope the function is executed.
     ***************************************************************************************************************************/
     public void objectSelectionEntered(SelectEnterEventArgs selectEnterEventArgs)
     {
@@ -25,7 +25,7 @@ public class RopeGrabbed : MonoBehaviour
     }
 
    /***************************************************************************************************************************
-    *This function is called after an object has been selected.
+    *This function is called after an object has been selected. When the object is the rope the function is executed.
     ***************************************************************************************************************************/
     public void objectSelectionExit(SelectExitEventArgs selectExitEventArgs)
     {

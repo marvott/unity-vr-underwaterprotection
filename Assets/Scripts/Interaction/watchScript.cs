@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 /***************************************************************************************************************************
  *This script provides the functionality to update the watche's score when a garbage object is collected aswell as it sets 
- *the initial value for the watch.
+ *the initial value for the watch. In general this script manages the text on the watch.
  ***************************************************************************************************************************/
 
 public class WatchScript : MonoBehaviour
@@ -47,12 +47,12 @@ public class WatchScript : MonoBehaviour
         piecesText = "Pieces: " + 0;
         OHIText = "OHI: " + 0;
         thisText.text = piecesText;
-        currentView = 0;
+        currentView = 0; // If 1 then OHIIndex is shown. If 0 then amount of Garbage is shown.
         progressbarSlider.fillRect.GetComponent<Image>().color = new Color(0,255,0);
     }
 
-    /***************************************************************************************************************************
-    *Updates score when selected interactable is tagged as "Garbage".
+   /***************************************************************************************************************************
+    *Updates score when selected interactable is tagged as "Garbage" and increases OHIIndex and amount of Garbage in SceneManager.
     ***************************************************************************************************************************/
     public void updateScore(SelectEnterEventArgs selectEnterEventArgs)
     {
@@ -66,6 +66,9 @@ public class WatchScript : MonoBehaviour
         };
     }
 
+    /***************************************************************************************************************************
+     *Changes value of current view depending on what is shown on the watch.
+     ***************************************************************************************************************************/
     private void switchWatchView(InputAction.CallbackContext ctx)
     {
         if (currentView == 1)
@@ -81,6 +84,10 @@ public class WatchScript : MonoBehaviour
         Debug.Log("Watch View changed");
     }
 
+    /***************************************************************************************************************************
+     *This Function is called to display the new text on the watches canvas and update the progressbar. The code is only executed
+     *if there isn't a new Message that hasn't been played or rejected yet. 
+     ***************************************************************************************************************************/
     public void updateWatch()
     {
          if (incomingMessage == false)
@@ -102,6 +109,10 @@ public class WatchScript : MonoBehaviour
         }
     }
 
+    /***************************************************************************************************************************
+     *This function is called when a new message is triggered. It is called again when this new message is player or rejected.
+     *Parameters: bool value
+     ***************************************************************************************************************************/
     public void setIncomingMessage(bool value)
     {
         incomingMessage = value;
@@ -122,6 +133,9 @@ public class WatchScript : MonoBehaviour
         }
     }
 
+    /***************************************************************************************************************************
+     *Is called when the player restarts the game.
+     ***************************************************************************************************************************/
     public void resetWatch()
     {
         OHIText = "OHI: " + SceneManager.GetComponent<SceneManagerScript>().getOHIIndex();
@@ -130,12 +144,18 @@ public class WatchScript : MonoBehaviour
 
     }
 
+    /***************************************************************************************************************************
+     *Is called when they player tries to play an audio while another audio is still playing.
+     ***************************************************************************************************************************/
     public void stillPlaying()
     {
         thisText.text = "Audio still playing!";
         Invoke("resetText", 1);
     }
 
+    /***************************************************************************************************************************
+     *Is called to reset the text. "Audio is still playing" is only shown for a short amount auf time.
+     ***************************************************************************************************************************/
     public void resetText()
     {
         if(thisText.text == "Audio still playing!")

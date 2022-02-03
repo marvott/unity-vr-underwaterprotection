@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
+/***************************************************************************************************************************
+ *This script is used to Start the game after the player presses the left trigger button. 
+ ***************************************************************************************************************************/
 public class StartGame : MonoBehaviour
 {
 
@@ -25,6 +28,9 @@ public class StartGame : MonoBehaviour
         permittedActions.performed += permittedAction;
     }
 
+    /***************************************************************************************************************************
+     *Is called to set variables so that the first audio is played aswell as it displays the credits.
+     ***************************************************************************************************************************/
     public void startIntroAudio(InputAction.CallbackContext ctx)
     {
         //gameObject.GetComponent<Text>().fontSize = 10;
@@ -33,17 +39,26 @@ public class StartGame : MonoBehaviour
         Invoke("disableText", 5f);
     }
 
+   /***************************************************************************************************************************
+    *Is when a permitted action is executed before the game is startet.
+    ***************************************************************************************************************************/
     public void permittedAction(InputAction.CallbackContext ctx)
     {
         text.color = Color.red;
         Invoke("permActReleased", 0.25f);
     }
 
+   /***************************************************************************************************************************
+    *Is called some time after the permitted action has been executed.
+    ***************************************************************************************************************************/
     private void permActReleased()
     {
         text.color = Color.white;
     }
 
+   /***************************************************************************************************************************
+    *Is called after the player has pressed the left trigger to disable the text.
+    ***************************************************************************************************************************/
     private void disableText()
     {
         gameObject.SetActive(false);

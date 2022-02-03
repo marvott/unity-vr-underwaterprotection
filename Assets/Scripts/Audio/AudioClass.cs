@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/***************************************************************************************************************************
+ *This class adds to a simple audio clip functionalities to see if the audio has been triggered an to play the audio.
+ ***************************************************************************************************************************/
 public class AudioClass
 {
     private bool hasBeenPlayed, hasToBePlayed;
@@ -13,7 +16,17 @@ public class AudioClass
     public GameObject sceneManager;
     private AudioClip audioClip;
 
-    //Constructor for Audio class triggered by zPos or amount of garbage.
+    /***************************************************************************************************************************
+     *Constructor to create an AudioClass.
+     *Parameters:
+     *AudioSource audioSource  The audioSource the audio should be played at.
+     *AudioClip audioClip      The audioClip that should be played.
+     *float numberToTrigger    The amount of the specified category that should be reached to trigger the audio.
+     *int triggerMode          Defines the category. 0 is z-Position 1 is amount of Garbage 2 is triggered by Start Button.
+     *GameObject SceneManager
+     *GameObject XRRig
+     *bool hasToBePlayed       If true the audio is mandatory. If false the audio is optional.
+     ***************************************************************************************************************************/
     public AudioClass(AudioSource audioSource, AudioClip audioClip, float numberToTrigger, int triggerMode, GameObject SceneManager, GameObject XRRig, bool hasToBePlayed )
     {
         this.audioSource = audioSource;
@@ -26,6 +39,12 @@ public class AudioClass
         this.hasToBePlayed = hasToBePlayed;
     }
 
+    /***************************************************************************************************************************
+     *Function to play the audio on the given audio Source.
+     *Return: 
+     *null        The audio is mandatory an directly played.
+     *audioClip   The audio is optional and stored in AudioManager
+     ***************************************************************************************************************************/
     public AudioClip play()
     {
         if(sceneManager.GetComponent<SceneManagerScript>().getStartTriggered() == false)
@@ -51,6 +70,12 @@ public class AudioClass
         return null;
     }
 
+    /***************************************************************************************************************************
+     *Function checks if the audio has been triggered depending on the trigger that has been defined in the constructor.
+     *Return:
+     *true 
+     *false
+     ***************************************************************************************************************************/
     public bool isTriggered()
     {
         //Triggered by z position.

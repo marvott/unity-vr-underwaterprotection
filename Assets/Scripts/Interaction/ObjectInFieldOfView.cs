@@ -5,6 +5,10 @@ using PathCreation.Examples;
 using System;
 using UnityEngine.Events;
 
+/***************************************************************************************************************************
+ *This script provides the functionally to detect wether the player looks at an specific object or not. A tolerance 
+ *so that the player does not need to look directly at the object is taken into account. 
+ ***************************************************************************************************************************/
 public class ObjectInFieldOfView : MonoBehaviour
 {
     public Camera camera;
@@ -16,6 +20,10 @@ public class ObjectInFieldOfView : MonoBehaviour
     public UnityEvent toBeExecuted;
 
 
+    /***************************************************************************************************************************
+     *In update function the vector between the player and object are constantly compared to the view vector of the camera.
+     *If both match the player looks at the given object.
+     ***************************************************************************************************************************/
     void Update()
     {
         camViewVec = camera.transform.forward;
@@ -34,7 +42,7 @@ public class ObjectInFieldOfView : MonoBehaviour
             playerObjectHighestValue = objectPlayerVec.z;
         }
 
-        objectPlayerVec = new Vector3(objectPlayerVec.x / playerObjectHighestValue, objectPlayerVec.y / playerObjectHighestValue, objectPlayerVec.z / playerObjectHighestValue);
+        objectPlayerVec = new Vector3(objectPlayerVec.x / playerObjectHighestValue, objectPlayerVec.y / playerObjectHighestValue, objectPlayerVec.z / playerObjectHighestValue); //To make both vectors comparable the related unit vector of objectPlayerVec is computed.
 
         camHighestValue = camViewVec.y;
         if (Math.Abs(camViewVec.x) > Math.Abs(camViewVec.y))
@@ -47,7 +55,7 @@ public class ObjectInFieldOfView : MonoBehaviour
             camHighestValue = camViewVec.z;
         }
 
-        camViewVec = new Vector3(camViewVec.x / camHighestValue, camViewVec.y / camHighestValue, camViewVec.z / camHighestValue);
+        camViewVec = new Vector3(camViewVec.x / camHighestValue, camViewVec.y / camHighestValue, camViewVec.z / camHighestValue); //To make both vectors comparable the related unit vector of camViewVec is computed.
         //Debug.Log("whalePlayerVec " + objectPlayerVec + "camViewVec" + camViewVec);
         //Debug.Log("PlayerPosition: " + playerPosition.z + "Objektposition" + objectPosition.z);
         if ((objectPlayerVec.x >= camViewVec.x - tolerance && objectPlayerVec.x <= camViewVec.x + tolerance) && (objectPlayerVec.y >= camViewVec.y - tolerance && objectPlayerVec.y <= camViewVec.y + tolerance) && (objectPlayerVec.z >= camViewVec.z - tolerance && objectPlayerVec.z <= camViewVec.z + tolerance) && Math.Abs(playerPosition.z - objectPosition.z) <= triggerDistanceZ)
@@ -56,6 +64,9 @@ public class ObjectInFieldOfView : MonoBehaviour
         }
     }
 
+    /***************************************************************************************************************************
+     *executeNow executes a specified function when the player look at the given object. 
+     ***************************************************************************************************************************/
     private void executeNow()
     {
         toBeExecuted.Invoke();
