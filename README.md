@@ -5,11 +5,7 @@
 The Idea behind <i>Underwater Protection</i> is this: Use an immersive VR-Experience to to draw attention to animal suffering and the destruction of the underwater world through pollution. In addition, the user is to be emotionally sensitised and moved to action. 
 The user is asked to collect plastic waste underwater. This task should be fun, but also impart knowledge. Facts and knowledge are conveyed during the task via audio. We want to show which problems there are under water and that it is important but difficult to solve them.
 The user is a research diver who is guided by a scientist that gives instructions via headset and comments on the stuff you see and do.
-
 When the trash is collected , the Ocean Health Index rises, which is displayed to the user. This is a scale that measures the health of the oceans for each country and includes, for example, the cleanliness of the water and biodiversity. The index should be raised by the user. 
-
-
-Translated with www.DeepL.com/Translator (free version)
 
 
 
