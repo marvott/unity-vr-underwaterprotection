@@ -1,9 +1,5 @@
-# AVR_MAMI
 
-
-
-
-<h1>Technical Documentation: Underwater Protection</h1>
+<h1>Technical Documentation for VR App in Unity: Underwater Protection</h1>
 
 <h3>In this technical Documentation you'll find everything you need to start using and improving our project.</h3>
 This markdown file is best viewed in visual studio code.
