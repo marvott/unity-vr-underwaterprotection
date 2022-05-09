@@ -206,6 +206,6 @@ Maybe there is a way to check if we are in Game-Mode in the Unity-Editor or play
 Therefore we just removed the upper line for the executable file and swapped it afterwards so the user/developer are able to end the game in the Editor.
 
 ## Contact
-If you have any further questions, feel free to contact us:
-* [Marvin Ottersberg](mailto:marvin.ottersberg@student.fh-kiel.de)
-* [Micha Wewers](mailto:micha.t.wewers@student.fh-kiel.de)
+If you have any further questions, feel free to visit our github profiles:
+* [Github from Moerv9](https://github.com/moerv9)
+* [Github from Michatw](https://github.com/michatw)
